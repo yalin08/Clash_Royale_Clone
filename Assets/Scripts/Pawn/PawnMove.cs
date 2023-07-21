@@ -18,7 +18,7 @@ public class PawnMove : MonoBehaviour
     private void Update()
     {
         agent.speed = stats.stat.speed;
-        agent.stoppingDistance = stats.stat.attackRange;
+        agent.stoppingDistance = stats.stat.attackRange*0.9f;
         if(target!=null)
         agent.SetDestination(target.position);
 

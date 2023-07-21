@@ -8,7 +8,7 @@ public class PawnManager : Singleton<PawnManager>
 
     public List<PawnAI> bluePawns;
 
-    private void Awake()
+    private void Start()
     {
         GameObject[] pawnsInStart = GameObject.FindGameObjectsWithTag("Pawn");
         foreach (GameObject go in pawnsInStart)
@@ -24,6 +24,22 @@ public class PawnManager : Singleton<PawnManager>
             }
         }
            
+    }
+
+    public void StopAllPawns()
+    {
+        foreach (PawnAI red in redPawns)
+        {
+            Destroy(red);
+        }
+        foreach (PawnAI blue in bluePawns)
+        {
+            Destroy(blue);
+        }
+
+
+        bluePawns.Clear();
+        redPawns.Clear();
     }
 
 }

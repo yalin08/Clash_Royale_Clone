@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c721028d16b6c4f977cdbd2a644592, type: 3}
+  m_Name: Warrior
+  m_EditorClassIdentifier: 
+  PawnObject: {fileID: 1120143792888624222, guid: f946197b15add084f8e9adc47c93116e,
+    type: 3}
+  stats:
+    health: 1380
+    maxHealth: 1380
+    damage: 167
+    attackPerSecond: 1.2
+    attackRange: 3
+    bulletSpeed: 6
+    speed: 6
+    canAttack: 1
+  ManaCost: 3
+  CharacterImage: {fileID: 21300000, guid: cac2b3af082e87f4cb32208636ee4679, type: 3}
