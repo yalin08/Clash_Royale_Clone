@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5399612492171965734}
   - component: {fileID: 6287455714067618376}
   - component: {fileID: 3312624352653495304}
-  - component: {fileID: 5942950614509314065}
+  - component: {fileID: 6425022393724913509}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Pawn
@@ -55,6 +55,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 0}
   shooter: {fileID: 0}
+  LastSeenPawn: {fileID: 0}
+  enemiesInRange: []
 --- !u!114 &4947269328134683384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,9 +69,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509adfd0b24a635458bf29f9feec51e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthBar: {fileID: 3604970447049403812, guid: 798ee4d72c55ce14a95438e4e9978a42,
-    type: 3}
-  healthBar: {fileID: 0}
   faction: 0
   enemyFaction: 0
   stat:
@@ -78,10 +77,15 @@ MonoBehaviour:
     damage: 167
     attackPerSecond: 1.2
     attackRange: 3
+    sightRange: 5.5
     bulletSpeed: 6
     speed: 6
     canAttack: 1
-  AirUnit: 0
+    canAttackAir: 0
+    AirUnit: 0
+  HealthBar: {fileID: 3604970447049403812, guid: 798ee4d72c55ce14a95438e4e9978a42,
+    type: 3}
+  healthBar: {fileID: 0}
 --- !u!114 &2345630531537550596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7642886011786209537, guid: 9555f731556b80d418a0b12f1b256b2e,
     type: 3}
+  stats: {fileID: 0}
   target: {fileID: 0}
 --- !u!114 &3781221260839857072
 MonoBehaviour:
@@ -162,18 +167,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5942950614509314065
-MonoBehaviour:
+--- !u!135 &6425022393724913509
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120143792888624222}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9af77a67c342ea4799fa7e7a55a0aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Radius: 5.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6093821353867793298
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +368,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bedc3e6b3c367742a60202e44fe301f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 5183303716867355825}
+--- !u!95 &5183303716867355825 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 118947772180229346, guid: f4b77c3e5f70c904a8b22481e364dfe2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5064400151481112659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6074194902395161575
 PrefabInstance:
   m_ObjectHideFlags: 0

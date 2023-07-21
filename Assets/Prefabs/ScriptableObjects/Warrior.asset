@@ -20,6 +20,7 @@ MonoBehaviour:
     damage: 167
     attackPerSecond: 1.2
     attackRange: 3
+    sightRange: 5.5
     bulletSpeed: 6
     speed: 6
     canAttack: 1

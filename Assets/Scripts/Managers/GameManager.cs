@@ -9,6 +9,8 @@ public class GameManager : Singleton<GameManager>
     public GameObject LoseScreen;
     public GameObject WinScreen;
 
+    public LayerMask redPawnLayer;
+    public LayerMask bluePawnLayer;
 
     public void Lose()
     {

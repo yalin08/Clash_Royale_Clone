@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(UnitCollisionController))]
+
 public class UnitStats : MonoBehaviour
 {
  
@@ -12,8 +12,7 @@ public class UnitStats : MonoBehaviour
     [HideInInspector] public Factions enemyFaction;
     public Stats stat;
     [Space]
-    [Space]
-    public bool AirUnit;
+
     float timer;
 
 
@@ -43,7 +42,7 @@ public class UnitStats : MonoBehaviour
 
     private void Update()
     {
-        if (!stat.canAttack)
+       /* if (!stat.canAttack)
         {
             timer += Time.deltaTime;
             if (timer >= stat.attackPerSecond)
@@ -51,7 +50,7 @@ public class UnitStats : MonoBehaviour
                 timer = 0;
                 stat.canAttack = true;
             }
-        }
+        } */
 
     }
 
@@ -86,11 +85,16 @@ public class Stats
     public float damage;
     public float attackPerSecond;
     public float attackRange;
+    public float sightRange;
 
     public float bulletSpeed;
 
     public float speed;
 
     public bool canAttack = true;
+    [Space]
+    public bool canAttackAir;
+    [Space]
+    public bool AirUnit;
 
 }

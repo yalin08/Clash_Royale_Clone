@@ -7,6 +7,8 @@ public class HealthBars : MonoBehaviour
     public Slider slider;
     Camera main;
 
+    public float yAxisOffset=1;
+
     private void Awake()
     {
         main = Camera.main;
@@ -15,7 +17,7 @@ public class HealthBars : MonoBehaviour
 
     private void Update()
     {
-        slider.transform.position = main.WorldToScreenPoint(transform.parent.position+Vector3.up);
+        slider.transform.position = main.WorldToScreenPoint(transform.parent.position+(Vector3.up* yAxisOffset));
     }
 
 }

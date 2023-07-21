@@ -20,8 +20,11 @@ MonoBehaviour:
     damage: 133
     attackPerSecond: 1.5
     attackRange: 3.5
+    sightRange: 5.5
     bulletSpeed: 8
     speed: 9
     canAttack: 1
+    canAttackAir: 1
+    AirUnit: 1
   ManaCost: 4
   CharacterImage: {fileID: 21300000, guid: 011c39fc400e33042a40bdd617093b5e, type: 3}

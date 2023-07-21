@@ -6,7 +6,9 @@ public class PawnManager : Singleton<PawnManager>
 {
     public List<PawnAI> redPawns;
 
+
     public List<PawnAI> bluePawns;
+
 
     private void Start()
     {
@@ -23,7 +25,7 @@ public class PawnManager : Singleton<PawnManager>
                 bluePawns.Add(pawnAI);
             }
         }
-           
+
     }
 
     public void StopAllPawns()
