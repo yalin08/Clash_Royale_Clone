@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  speed: 0
+  EnemyFaction: 0
 --- !u!136 &5659022800287206789
 CapsuleCollider:
   m_ObjectHideFlags: 0

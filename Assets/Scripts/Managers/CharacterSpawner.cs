@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pixelplacement;
-
+using UnityEngine.UI;
+using TMPro;
 public class CharacterSpawner : Singleton<CharacterSpawner>
 {
     public GameObject Object;
@@ -65,4 +66,7 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
             //     Instantiate(Object, worldPosition, Quaternion.identity);
         }
     }
+
+
+   
 }

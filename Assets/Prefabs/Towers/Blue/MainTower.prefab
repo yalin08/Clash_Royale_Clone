@@ -246,11 +246,11 @@ MonoBehaviour:
     damage: 54
     attackPerSecond: 1
     attackRange: 7
-    sightRange: 0
-    bulletSpeed: 5
+    sightRange: 1
+    bulletSpeed: 6
     speed: 0
     canAttack: 1
-    canAttackAir: 0
+    canAttackAir: 1
     AirUnit: 0
   HealthBar: {fileID: 3604970447049403812, guid: 798ee4d72c55ce14a95438e4e9978a42,
     type: 3}
@@ -353,7 +353,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6564345959934576704
 GameObject:
@@ -629,6 +629,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 26dde8d170bfa354bbcbd9335444d55f, type: 2}
+    - target: {fileID: 5923067744305060106, guid: d6d8ae7952115cc4a905e19d3fa43560,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 8d344941f9de60c478dd461560dbc028,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d8ae7952115cc4a905e19d3fa43560, type: 3}
 --- !u!1 &6107281044992584014 stripped

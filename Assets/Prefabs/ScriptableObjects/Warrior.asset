@@ -24,5 +24,7 @@ MonoBehaviour:
     bulletSpeed: 6
     speed: 6
     canAttack: 1
+    canAttackAir: 0
+    AirUnit: 0
   ManaCost: 3
   CharacterImage: {fileID: 21300000, guid: cac2b3af082e87f4cb32208636ee4679, type: 3}

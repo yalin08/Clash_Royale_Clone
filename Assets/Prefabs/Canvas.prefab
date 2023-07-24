@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 2263551325068190972}
+  yAxisOffset: 1
 --- !u!223 &5387698854864240747
 Canvas:
   m_ObjectHideFlags: 0
@@ -227,10 +228,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 537870858453959945, guid: ed395850253f445498a597ed283d387e,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 537870858453959946, guid: ed395850253f445498a597ed283d387e,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 537870858453959951, guid: ed395850253f445498a597ed283d387e,
         type: 3}
       propertyPath: m_Name
       value: Slider14
+      objectReference: {fileID: 0}
+    - target: {fileID: 537870858571518816, guid: ed395850253f445498a597ed283d387e,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 537870858571518823, guid: ed395850253f445498a597ed283d387e,
         type: 3}

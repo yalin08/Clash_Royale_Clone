@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Pixelplacement;
-
+using TMPro;
 
 public class CardsManager : Singleton<CardsManager>
 {
@@ -47,4 +47,5 @@ public class CardsManager : Singleton<CardsManager>
             list[n] = value;
         }
     }
+
 }

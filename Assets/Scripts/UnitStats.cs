@@ -9,7 +9,7 @@ public class UnitStats : MonoBehaviour
  
 
     public Factions faction;
-    [HideInInspector] public Factions enemyFaction;
+     public Factions enemyFaction;
     public Stats stat;
     [Space]
 
@@ -33,10 +33,10 @@ public class UnitStats : MonoBehaviour
         {
             GameObject go = Instantiate(HealthBar, transform);
             healthBar = GetComponentInChildren<HealthBars>();
-            enemyFaction = TowersManager.Instance.EnemyFaction(faction);
+         
         }
 
-
+        enemyFaction = TowersManager.Instance.EnemyFaction(faction);
         healthBar.slider.value = stat.health / stat.maxHealth;
     }
 

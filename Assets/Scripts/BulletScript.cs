@@ -12,17 +12,24 @@ public class BulletScript : MonoBehaviour
         transform.position += transform.forward * speed * Time.deltaTime;
     }
 
+
+
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<UnitStats>() != null)
+        if (other.isTrigger == false)
         {
-            UnitStats UnitStats = other.GetComponent<UnitStats>();
-            if (UnitStats.faction == EnemyFaction)
+            if (other.GetComponent<UnitStats>() != null)
             {
-                UnitStats.TakeDamage(damage);
-                Destroy(gameObject);
+                UnitStats UnitStats = other.GetComponent<UnitStats>();
+                if (UnitStats.faction == EnemyFaction)
+                {
+                    UnitStats.TakeDamage(damage);
+                    Destroy(gameObject);
+                }
             }
         }
+     
     }
 
 }

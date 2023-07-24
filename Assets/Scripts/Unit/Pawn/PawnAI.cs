@@ -58,9 +58,6 @@ public class PawnAI : MonoBehaviour
         }
 
 
-
-
-
     }
 
     void AttackEnemy()

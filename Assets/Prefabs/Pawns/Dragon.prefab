@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3485850350328201771}
   - component: {fileID: 4947269328134683384}
   - component: {fileID: 2345630531537550596}
-  - component: {fileID: 3781221260839857072}
   - component: {fileID: 5399612492171965734}
+  - component: {fileID: 7529215331436843639}
   - component: {fileID: 6287455714067618376}
   - component: {fileID: 3312624352653495304}
   - component: {fileID: 6425022393724913509}
@@ -102,19 +102,6 @@ MonoBehaviour:
     type: 3}
   stats: {fileID: 0}
   target: {fileID: 0}
---- !u!114 &3781221260839857072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120143792888624222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90dde84f79a0c7345938902842716b03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!136 &5399612492171965734
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -129,6 +116,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7529215331436843639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120143792888624222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f3bb7c21fe5514fb7c833e1aeff455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  agent: {fileID: 0}
+  target: {fileID: 0}
 --- !u!195 &6287455714067618376
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -136,7 +138,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120143792888624222}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -1688,6 +1690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bedc3e6b3c367742a60202e44fe301f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shooter: {fileID: 0}
   animator: {fileID: 744130312697469192}
 --- !u!95 &744130312697469192 stripped
 Animator:

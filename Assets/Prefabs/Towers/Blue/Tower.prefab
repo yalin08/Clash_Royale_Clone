@@ -181,9 +181,7 @@ GameObject:
   - component: {fileID: 1440748515457147150}
   - component: {fileID: 1495360871912061045}
   - component: {fileID: 4691272595338126814}
-  - component: {fileID: 2757333859921439348}
   - component: {fileID: 8867603834282012432}
-  - component: {fileID: 8792943893844481145}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -245,11 +243,11 @@ MonoBehaviour:
     damage: 54
     attackPerSecond: 0.8
     attackRange: 7.5
-    sightRange: 0
-    bulletSpeed: 5
+    sightRange: 3
+    bulletSpeed: 8
     speed: 0
     canAttack: 1
-    canAttackAir: 0
+    canAttackAir: 1
     AirUnit: 0
   HealthBar: {fileID: 3604970447049403812, guid: 798ee4d72c55ce14a95438e4e9978a42,
     type: 3}
@@ -299,19 +297,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2757333859921439348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495360871912061044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9af77a67c342ea4799fa7e7a55a0aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LastSeenPawn: {fileID: 0}
 --- !u!208 &8867603834282012432
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -328,19 +313,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!135 &8792943893844481145
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495360871912061044}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3269989925315731292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,5 +1777,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bedc3e6b3c367742a60202e44fe301f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shooter: {fileID: 0}
+  shooter: {fileID: 1440748515457147150}
   animator: {fileID: 3530866184834462528}

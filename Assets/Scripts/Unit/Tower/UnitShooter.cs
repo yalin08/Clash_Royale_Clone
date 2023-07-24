@@ -42,6 +42,8 @@ public class UnitShooter : MonoBehaviour
     public void ShootBullet()
     {
 
+       // Debug.Log(gameObject.name);
+
         GameObject bulletObject = Instantiate(bulletPrefab, transform.position, transform.rotation);
         BulletScript bullet = bulletObject.GetComponent<BulletScript>();
         bullet.damage = stats.stat.damage;
