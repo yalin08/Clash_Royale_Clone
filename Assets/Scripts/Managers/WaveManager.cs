@@ -17,7 +17,7 @@ public class Waves
 [System.Serializable]
 public class Wave
 {
-    public GameObject Enemy;
+    public Pawn Enemy;
     public int EnemySpawnRate;
     public float SpawnTimer;
 }
@@ -83,26 +83,21 @@ public class WaveManager : Singleton<WaveManager>
         yield return new WaitForSeconds(currentwave.enemies[enemynumber].SpawnTimer);
 
         for (int i = 0; i < currentwave.enemies[enemynumber].EnemySpawnRate; i++)
-            SpawnEnemy(currentwave.enemies[enemynumber].Enemy);
+        {
+            int j = Random.Range(0, EnemySpawnLocations.Length - 1);
+
+            currentwave.enemies[enemynumber].Enemy.SpawnPawn(Factions.Red, EnemySpawnLocations[j].position);
+        }
+          
 
         StartCoroutine(WaveEnemy(enemynumber));
     }
 
 
-    void SpawnEnemy(GameObject enemy)
-    {
-        int i = Random.Range(0, EnemySpawnLocations.Length - 1);
 
-        float rand1 = Random.Range(-3f, 3f);
-        float rand2 = Random.Range(-3f, 3f);
-
-        Vector3 v = new Vector3(rand1, 0, rand2);
-        GameObject spawnedEnemy = Instantiate(enemy, EnemySpawnLocations[i].position + v, Quaternion.identity, transform.parent);
-        PawnManager.Instance.redPawns.Add(spawnedEnemy.GetComponent<PawnAI>());
-    }
     string mins;
     string secs;
-    bool AfterHalfMinute;
+
 
 
     private void Update()

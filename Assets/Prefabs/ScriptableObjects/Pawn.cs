@@ -29,10 +29,21 @@ public class Pawn : ScriptableObject
         if (faction == Factions.Blue)
         {
             GameObject go = Instantiate(PawnObject, position, Quaternion.identity);
-            if(!stats.AirUnit)
+            UnitStats stats = go.GetComponent<UnitStats>();
+            stats.faction = Factions.Blue;
+            stats.enemyFaction = Factions.Red;
             PawnManager.Instance.bluePawns.Add(go.GetComponent<PawnAI>());
-            else
-                PawnManager.Instance.bluePawns.Add(go.GetComponent<PawnAI>());
+
+
+        }
+        if (faction == Factions.Red)
+        {
+            GameObject go = Instantiate(PawnObject, position, Quaternion.identity);
+            UnitStats stats = go.GetComponent<UnitStats>();
+            stats.faction = Factions.Red;
+            stats.enemyFaction = Factions.Blue;
+            PawnManager.Instance.redPawns.Add(go.GetComponent<PawnAI>());
+
         }
 
     }

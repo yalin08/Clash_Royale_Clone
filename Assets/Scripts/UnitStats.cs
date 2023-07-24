@@ -25,7 +25,7 @@ public class UnitStats : MonoBehaviour
     private void OnValidate()
     {
         stat.maxHealth = stat.health;
-  
+      
     }
     private void Awake()
     {
@@ -36,8 +36,18 @@ public class UnitStats : MonoBehaviour
          
         }
 
-        enemyFaction = TowersManager.Instance.EnemyFaction(faction);
+        
         healthBar.slider.value = stat.health / stat.maxHealth;
+        healthBar.healthText.text = "" + stat.health;
+
+        healthBar.gameObject.SetActive(false);
+
+
+
+    }
+    private void Start()
+    {
+       
     }
 
     private void Update()
@@ -58,6 +68,9 @@ public class UnitStats : MonoBehaviour
     {
         stat.health -= damage;
         healthBar.slider.value = stat.health / stat.maxHealth;
+        healthBar.healthText.text = ""+stat.health;
+        healthBar.gameObject.SetActive(true);
+
         if (stat.health <= 0)
         {
             Die();
