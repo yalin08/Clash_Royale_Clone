@@ -12,7 +12,7 @@ public class TowerAI : MonoBehaviour
     {
         stats = GetComponent<UnitStats>();
 
-        enemyFaction = TowersManager.Instance.EnemyFaction(stats.faction);
+        enemyFaction = AdressableManager.Instance.EnemyFaction(stats.faction);
         shooter = GetComponent<UnitShooter>();
 
         if (enemyFaction == Factions.Blue)
@@ -31,7 +31,7 @@ public class TowerAI : MonoBehaviour
     }
     public PawnAI FindClosestPawn()
     {
-       
+
         PawnAI closestEnemy = EnemyPawns[0];
         float closestDistance = Mathf.Infinity;
 

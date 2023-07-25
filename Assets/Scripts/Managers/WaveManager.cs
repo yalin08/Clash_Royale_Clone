@@ -85,10 +85,10 @@ public class WaveManager : Singleton<WaveManager>
         for (int i = 0; i < currentwave.enemies[enemynumber].EnemySpawnRate; i++)
         {
             int j = Random.Range(0, EnemySpawnLocations.Length - 1);
-
-            currentwave.enemies[enemynumber].Enemy.SpawnPawn(Factions.Red, EnemySpawnLocations[j].position);
+            int id = currentwave.enemies[enemynumber].Enemy.pawnID;
+            currentwave.enemies[enemynumber].Enemy.SpawnPawn(id, Factions.Red, EnemySpawnLocations[j].position);
         }
-          
+
 
         StartCoroutine(WaveEnemy(enemynumber));
     }

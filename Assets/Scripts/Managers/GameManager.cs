@@ -45,7 +45,7 @@ public class GameManager : Singleton<GameManager>
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
 

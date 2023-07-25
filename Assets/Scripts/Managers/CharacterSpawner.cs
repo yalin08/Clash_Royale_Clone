@@ -34,8 +34,8 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
 
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                if(hit.transform.gameObject.layer==7)
-                worldPosition = hit.point;
+                if (hit.transform.gameObject.layer == 7)
+                    worldPosition = hit.point;
             }
 
         }
@@ -50,14 +50,15 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
                 return;
             }
 
-               if (worldPosition != Vector3.zero)
-                {
-                    CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.SpawnPawn(Factions.Blue, worldPosition);
-                    ManaManager.Instance.SpendMana(CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.ManaCost);
-                    CardsManager.Instance.Cards[SelectedCard].RepresentedPawn = CardsManager.Instance.Deck[Random.Range(0, 3)];
-                    CardsManager.Instance.Cards[SelectedCard].UpdateCard();
-                    SelectedCard = -1;
-                }
+            if (worldPosition != Vector3.zero)
+            {
+                int cardID = CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.pawnID;
+                CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.SpawnPawn(cardID,Factions.Blue, worldPosition);
+                ManaManager.Instance.SpendMana(CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.ManaCost);
+                CardsManager.Instance.Cards[SelectedCard].RepresentedPawn = CardsManager.Instance.Deck[Random.Range(0, 3)];
+                CardsManager.Instance.Cards[SelectedCard].UpdateCard();
+                SelectedCard = -1;
+            }
 
 
 
@@ -68,5 +69,5 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
     }
 
 
-   
+
 }

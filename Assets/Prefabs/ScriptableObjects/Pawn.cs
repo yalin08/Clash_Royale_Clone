@@ -8,7 +8,7 @@ public class Pawn : ScriptableObject
     public GameObject PawnObject;
 
     public Stats stats;
-
+    public int pawnID;
     public int ManaCost;
     public Sprite CharacterImage;
 
@@ -24,7 +24,7 @@ public class Pawn : ScriptableObject
     }
 
 
-    public void SpawnPawn(Factions faction, Vector3 position)
+    public void SpawnPawn(int pawnID,Factions faction, Vector3 position)
     {
         if (faction == Factions.Blue)
         {
