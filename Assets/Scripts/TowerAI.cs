@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
+
+
 public class TowerAI : MonoBehaviour
 {
     [HideInInspector] public UnitStats stats;
@@ -12,7 +17,7 @@ public class TowerAI : MonoBehaviour
     {
         stats = GetComponent<UnitStats>();
 
-        enemyFaction = AdressableManager.Instance.EnemyFaction(stats.faction);
+        enemyFaction = PawnManager.Instance.EnemyFaction(stats.faction);
         shooter = GetComponent<UnitShooter>();
 
         if (enemyFaction == Factions.Blue)

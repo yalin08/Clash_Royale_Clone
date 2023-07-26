@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 5bd3a2ae2a1cd6a479f17355452fa423
   m_currentHash:
     serializedVersion: 2
-    Hash: 3cf80727a37d239faebaf62136d81952
+    Hash: ad527fafc80f365afabf1adadf615ea7
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
       - m_Id: 3336037b48d27784f9c773dd04e6145a
         m_Value: ServerData/[BuildTarget]
       - m_Id: 4fbd2c4e2a38e524e926a1e7479b2160
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://storage.googleapis.com/clashroyalenosurrender/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: 6f0841d33b46ed74eb7f8e5f65b58188
       m_Name: BuildTarget
@@ -87,6 +87,7 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - level
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: e28a29ef57a09e44187003b292a4b731, type: 2}
