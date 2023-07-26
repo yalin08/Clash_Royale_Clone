@@ -29,25 +29,25 @@ public class UnitStats : MonoBehaviour
     }
     private void Awake()
     {
-        if (healthBar == null)
-        {
-            GameObject go = Instantiate(HealthBar, transform);
-            healthBar = GetComponentInChildren<HealthBars>();
-         
-        }
-
-        
-        healthBar.slider.value = stat.health / stat.maxHealth;
-        healthBar.healthText.text = "" + stat.health;
-
-        healthBar.gameObject.SetActive(false);
-
+      
 
 
     }
     private void Start()
     {
-       
+        if (healthBar == null)
+        {
+            GameObject go = Instantiate(HealthBar, transform);
+            healthBar = GetComponentInChildren<HealthBars>();
+
+        }
+
+
+        healthBar.slider.value = stat.health / stat.maxHealth;
+        healthBar.healthText.text = "" + stat.health;
+
+        healthBar.gameObject.SetActive(false);
+
     }
 
     private void Update()

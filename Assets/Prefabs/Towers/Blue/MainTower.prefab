@@ -181,7 +181,6 @@ GameObject:
   - component: {fileID: 1002886697430658682}
   - component: {fileID: 5831646272305693540}
   - component: {fileID: 7559253077434740019}
-  - component: {fileID: 671251422346635779}
   - component: {fileID: 2995990799975779263}
   - component: {fileID: 3650057697867624508}
   - component: {fileID: 1926464060968236271}
@@ -319,19 +318,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &671251422346635779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5831646272305693547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9af77a67c342ea4799fa7e7a55a0aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LastSeenPawn: {fileID: 0}
 --- !u!208 &2995990799975779263
 NavMeshObstacle:
   m_ObjectHideFlags: 0

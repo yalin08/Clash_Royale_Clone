@@ -17,31 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 5bd3a2ae2a1cd6a479f17355452fa423
   m_SerializeEntries:
-  - m_GUID: c8a0007eb2440e544b6efddd00af3015
-    m_Address: Assets/Prefabs/Pawns/Archer.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 261cb0ff99dff0143945689102b005db
-    m_Address: Assets/Prefabs/Pawns/Dragon.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f946197b15add084f8e9adc47c93116e
-    m_Address: Assets/Prefabs/Pawns/Warrior.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 82af7dae195543d4b9fd4959943db8f7
-    m_Address: Assets/Models
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ce0f33257a8ca33458dc26c35f6b57d6
-    m_Address: Assets/Materials
+  - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
+    m_Address: GameScene
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

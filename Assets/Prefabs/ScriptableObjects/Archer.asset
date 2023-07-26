@@ -24,7 +24,8 @@ MonoBehaviour:
     bulletSpeed: 8
     speed: 6
     canAttack: 1
-    canAttackAir: 0
+    canAttackAir: 1
     AirUnit: 0
+  pawnID: 0
   ManaCost: 3
   CharacterImage: {fileID: 21300000, guid: bb27f62537e94814abc7fb2b881e1f6d, type: 3}

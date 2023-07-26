@@ -34,18 +34,22 @@ public class GameManager : Singleton<GameManager>
     {
         PawnManager.Instance.StopAllPawns();
         LoseScreen.SetActive(true);
+
+        WaveManager.Instance.StopAllCoroutines();
     }
 
     public void Win()
     {
         PawnManager.Instance.StopAllPawns();
         WinScreen.SetActive(true);
+
+        WaveManager.Instance.StopAllCoroutines();
     }
 
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(1);
+        AdressableManager.Instance.LoadGameScene();
     }
 
 

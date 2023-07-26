@@ -26,6 +26,7 @@ public class Pawn : ScriptableObject
 
     public void SpawnPawn(int pawnID,Factions faction, Vector3 position)
     {
+  
         if (faction == Factions.Blue)
         {
             GameObject go = Instantiate(PawnObject, position, Quaternion.identity);

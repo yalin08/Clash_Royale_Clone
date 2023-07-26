@@ -44,6 +44,19 @@ public class PawnManager : Singleton<PawnManager>
         redPawns.Clear();
     }
 
+
+    public Factions EnemyFaction(Factions faction)
+    {
+        int i = (int)faction;
+
+        if (i == 0)
+            i = 1;
+        else
+            i = 0;
+
+        return (Factions)i;
+    }
+
 }
 
 

@@ -15,35 +15,62 @@ public class AdressableManager : Singleton<AdressableManager>
     public AssetReference[] Pawns;
     public GameObject ggo;
     public Slider slider;
+
     public TMPro.TextMeshProUGUI text;
     public AssetLabelReference labelReference;
     private AsyncOperationHandle mSceneHandle;
+    bool showSlider = false;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        //  text.text = ""+Addressables.GetDownloadSizeAsync("Level");
-        Addressables.InitializeAsync().Completed += Addressables_Completed;
+      //  Addressables.ClearDependencyCacheAsync("GameScene");
+    }
 
+    public void AcceptedDownload()
+    {
+        mSceneHandle = Addressables.DownloadDependenciesAsync("GameScene");
 
+        mSceneHandle.Completed += Download_Completed;
+
+        showSlider = true;
+    }
+
+    public void RefusedDownload()
+    {
+        Application.Quit();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-       // slider.value = Addressables.DownloadDependenciesAsync(labelReference).GetDownloadStatus().Percent;
+        if (text != null)
+        {
+            var Size = Addressables.GetDownloadSizeAsync("GameScene").Result;
+
+            text.text = $"Download Size {(Size/1024)/1024} mb. \nDownload ? ";
+        }
+
+        if (showSlider)
+            slider.value = mSceneHandle.PercentComplete;
+
 
     }
 
 
 
-    private void Addressables_Completed(AsyncOperationHandle<IResourceLocator> obj)
+    private void Download_Completed(AsyncOperationHandle obj)
     {
-        SceneManager.LoadScene(1);
+
+        LoadGameScene(); showSlider = false;
+
     }
 
-
+    public void LoadGameScene()
+    {
+        Addressables.LoadSceneAsync("GameScene");
+    }
 
 
 
@@ -54,21 +81,10 @@ public class AdressableManager : Singleton<AdressableManager>
 
         pawn.InstantiateAsync().Completed += go =>
         {
-            go.Result.GetComponent<UnitStats>().faction = faction;
-            go.Result.GetComponent<UnitStats>().enemyFaction = EnemyFaction(faction);
         };
-    }
-    public Factions EnemyFaction(Factions faction)
-    {
-        int i = (int)faction;
-
-        if (i == 0)
-            i = 1;
-        else
-            i = 0;
-
-        return (Factions)i;
     }
 
 
 }
+
+

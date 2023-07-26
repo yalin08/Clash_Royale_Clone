@@ -34,7 +34,11 @@ public class WaveManager : Singleton<WaveManager>
     public TextMeshProUGUI Timer;
 
 
+    private void Start()
+    {
+        StartWaves();
 
+    }
     private void OnValidate()
     {
         if (LevelWaves.Length > 0)

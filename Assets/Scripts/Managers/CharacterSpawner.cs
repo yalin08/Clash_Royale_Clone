@@ -14,15 +14,13 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
 
 
 
-
     void Update()
     {
         if (SelectedCard < 0)
             return;
         if (CardsManager.Instance.Cards[SelectedCard].RepresentedPawn == null)
             return;
-        if (ManaManager.Instance.currentMana < CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.ManaCost)
-            return;
+        
 
         if (Input.GetMouseButton(0)) // Left mouse button
         {
@@ -34,7 +32,7 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
 
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                if (hit.transform.gameObject.layer == 7)
+                if(hit.transform.gameObject.layer==7)
                     worldPosition = hit.point;
             }
 
@@ -46,7 +44,7 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
 
             if (ManaManager.Instance.currentMana < CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.ManaCost)
             {
-                ManaManager.Instance.ChangeUIValues();
+                ManaManager.Instance.NotEnoughMana();
                 return;
             }
 

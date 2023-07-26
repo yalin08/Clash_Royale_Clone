@@ -16,6 +16,7 @@ public class ManaManager : Singleton<ManaManager>
 
     public Slider manaSlider;
     public TextMeshProUGUI manaText;
+    public TextMeshProUGUI notEnoughManaText;
 
 
 
@@ -58,6 +59,15 @@ public class ManaManager : Singleton<ManaManager>
     {
         manaText.transform.DOScale(1f, 0.4f);
         manaSlider.transform.DOScale(1f, 0.3f);
+        notEnoughManaText.enabled = false;
     }
+
+    public void NotEnoughMana()
+    {
+        manaText.transform.DOShakeScale(0.5f,0.5f).OnComplete(ResetTextTween);
+        manaSlider.transform.DOShakeScale(0.5f, 0.5f);
+        notEnoughManaText.enabled = true;
+    }
+
 
 }
