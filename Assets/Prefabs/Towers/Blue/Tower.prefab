@@ -177,7 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495360871912061048}
   - component: {fileID: 5331855500086610264}
-  - component: {fileID: 3806901809645167589}
+  - component: {fileID: 7219877710313608512}
   - component: {fileID: 1440748515457147150}
   - component: {fileID: 1495360871912061045}
   - component: {fileID: 4691272595338126814}
@@ -223,7 +223,7 @@ MonoBehaviour:
   stats: {fileID: 0}
   shooter: {fileID: 0}
   EnemyPawns: []
---- !u!114 &3806901809645167589
+--- !u!114 &7219877710313608512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1495360871912061044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 509adfd0b24a635458bf29f9feec51e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bb572140753aba4189092df7d04ae46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 0
@@ -252,6 +252,8 @@ MonoBehaviour:
   HealthBar: {fileID: 3604970447049403812, guid: 798ee4d72c55ce14a95438e4e9978a42,
     type: 3}
   healthBar: {fileID: 6445752064257694148}
+  side: 0
+  DestroyCanBePlaced: {fileID: 0}
 --- !u!114 &1440748515457147150
 MonoBehaviour:
   m_ObjectHideFlags: 0

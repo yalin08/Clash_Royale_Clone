@@ -27,6 +27,11 @@ public class AdressableManager : Singleton<AdressableManager>
       //  Addressables.ClearDependencyCacheAsync("GameScene");
     }
 
+    public void Clear()
+    {
+        Caching.ClearCache();
+    }
+
     public void AcceptedDownload()
     {
         mSceneHandle = Addressables.DownloadDependenciesAsync("GameScene");

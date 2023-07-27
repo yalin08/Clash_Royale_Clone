@@ -11,11 +11,15 @@ public class CardsManager : Singleton<CardsManager>
 
 
     public UICard[] Cards;
+    public UICard NextCard;
 
 
+
+    public int nextCardNumber;
     private void Start()
     {
-        UpdateCards();
+        UpdateCards(); nextCardNumber = 1;
+        UpdateNextCard();
     }
 
     public void UpdateCards()
@@ -30,6 +34,31 @@ public class CardsManager : Singleton<CardsManager>
             Cards[i].UpdateCard();
         }
     }
+
+
+    public void UpdateSingleCard(UICard card)
+    {
+
+
+       
+
+        card.RepresentedPawn = Deck[nextCardNumber];
+        card.UpdateCard();
+
+        nextCardNumber++;
+        if (nextCardNumber >= Deck.Count)
+            nextCardNumber = 0;
+
+        UpdateNextCard();
+
+    }
+
+    public void UpdateNextCard()
+    {
+        NextCard.RepresentedPawn = Deck[nextCardNumber];
+        NextCard.UpdateCard();
+    }
+
 
 
     // Fisher-Yates shuffle algorithm

@@ -49,7 +49,8 @@ public class GameManager : Singleton<GameManager>
 
     public void RestartLevel()
     {
-        AdressableManager.Instance.LoadGameScene();
+        SceneManager.LoadScene(0);
+        AdressableManager.Instance.Clear();
     }
 
 

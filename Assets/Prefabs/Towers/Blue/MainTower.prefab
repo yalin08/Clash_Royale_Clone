@@ -177,12 +177,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5831646272305693543}
   - component: {fileID: 7073159306481565546}
-  - component: {fileID: 7120013975404208860}
+  - component: {fileID: 3650057697867624508}
   - component: {fileID: 1002886697430658682}
   - component: {fileID: 5831646272305693540}
   - component: {fileID: 7559253077434740019}
   - component: {fileID: 2995990799975779263}
-  - component: {fileID: 3650057697867624508}
   - component: {fileID: 1926464060968236271}
   m_Layer: 0
   m_Name: MainTower
@@ -225,7 +224,7 @@ MonoBehaviour:
   stats: {fileID: 0}
   shooter: {fileID: 0}
   EnemyPawns: []
---- !u!114 &7120013975404208860
+--- !u!114 &3650057697867624508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,7 +233,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5831646272305693547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 509adfd0b24a635458bf29f9feec51e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4633139f4656e624e8d21c36a4232569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 0
@@ -254,6 +253,7 @@ MonoBehaviour:
   HealthBar: {fileID: 3604970447049403812, guid: 798ee4d72c55ce14a95438e4e9978a42,
     type: 3}
   healthBar: {fileID: 4183232240812321067}
+  faction: 0
 --- !u!114 &1002886697430658682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,19 +334,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &3650057697867624508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5831646272305693547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4633139f4656e624e8d21c36a4232569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  faction: 0
 --- !u!135 &1926464060968236271
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -395,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 6564345959934576704}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.023468014, y: -0.9967429, z: 1.6535821}
+  m_LocalPosition: {x: 0, y: -0.9967429, z: 1.6535821}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
