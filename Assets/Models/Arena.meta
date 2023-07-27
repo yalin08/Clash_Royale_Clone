@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Models/Arena.meta
 guid: 621301b4998122047aacb9e629b31600
+========
+guid: 83e0f3dd495629843995b480254ce95f
+>>>>>>>> b791f3182fcd7333e62e8a74b27be2ac6d6f816f:Assets/StompyRobot.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
