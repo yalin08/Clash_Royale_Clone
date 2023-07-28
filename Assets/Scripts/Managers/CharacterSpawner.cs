@@ -9,7 +9,7 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
     public int SelectedCard;
     Ray ray;
     Vector3 worldPosition;
-
+    public LayerMask layerToIgnore;
 
     public GameObject BlockObj;
 
@@ -39,8 +39,9 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
             // Create a ray from the camera to the mouse position
             ray = Camera.main.ScreenPointToRay(mousePosition);
 
-            if (Physics.Raycast(ray, out RaycastHit hit))
+            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, ~layerToIgnore))
             {
+                Debug.Log("hit");
                 if (hit.transform.gameObject.layer == 7)
                     worldPosition = hit.point;
             }

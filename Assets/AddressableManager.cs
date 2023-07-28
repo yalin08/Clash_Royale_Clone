@@ -5,31 +5,36 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.AddressableAssets.ResourceLocators;
 using UnityEngine.AddressableAssets.ResourceProviders;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement;
 using Pixelplacement;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class AdressableManager : Singleton<AdressableManager>
+using UnityEngine.ResourceManagement.ResourceProviders;
+
+public class AddressableManager : Singleton<AddressableManager>
+
 {
-
-
     public AssetReference[] Pawns;
     public GameObject ggo;
     public Slider slider;
 
     public TMPro.TextMeshProUGUI text;
-    public AssetLabelReference labelReference;
+
     private AsyncOperationHandle mSceneHandle;
     bool showSlider = false;
-
+    AsyncOperationHandle<SceneInstance> sceneinstance;
 
     private void Start()
     {
-      //  Addressables.ClearDependencyCacheAsync("GameScene");
+        //  Addressables.ClearDependencyCacheAsync("GameScene");
     }
 
     public void Clear()
     {
-        Caching.ClearCache();
+
+
+        Addressables.UnloadSceneAsync(sceneinstance);
+        Addressables.Release(mSceneHandle);
     }
 
     public void AcceptedDownload()
@@ -54,7 +59,7 @@ public class AdressableManager : Singleton<AdressableManager>
         {
             var Size = Addressables.GetDownloadSizeAsync("GameScene").Result;
 
-            text.text = $"Download Size {(Size/1024)/1024} mb. \nDownload ? ";
+            text.text = $"Download Size {(Size / 1024) / 1024} mb. \nDownload ? ";
         }
 
         if (showSlider)
@@ -74,7 +79,7 @@ public class AdressableManager : Singleton<AdressableManager>
 
     public void LoadGameScene()
     {
-        Addressables.LoadSceneAsync("GameScene");
+        sceneinstance = Addressables.LoadSceneAsync("GameScene");
     }
 
 
