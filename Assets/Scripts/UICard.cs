@@ -14,12 +14,12 @@ public class UICard : MonoBehaviour
     {
         CharacterSpawner.Instance.SelectedCard = buttonNumber;
 
-
+        CharacterSpawner.Instance.cardWillFollow = true;
 
         //change this later
 
 
-      
+
 
     }
 

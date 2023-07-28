@@ -22,6 +22,18 @@ public class CardsManager : Singleton<CardsManager>
         UpdateNextCard();
     }
 
+
+
+    public void ResetCardPositions()
+    {
+        foreach (UICard card in Cards)
+        {
+            card.transform.localPosition = Vector3.zero;
+        }
+    }
+
+
+
     public void UpdateCards()
     {
         ShuffleList(Deck);
@@ -40,7 +52,7 @@ public class CardsManager : Singleton<CardsManager>
     {
 
 
-       
+
 
         card.RepresentedPawn = Deck[nextCardNumber];
         card.UpdateCard();
