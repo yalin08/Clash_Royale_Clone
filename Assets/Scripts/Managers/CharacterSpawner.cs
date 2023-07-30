@@ -4,45 +4,142 @@ using UnityEngine;
 using Pixelplacement;
 using UnityEngine.UI;
 using TMPro;
-public class CharacterSpawner : Singleton<CharacterSpawner>
+using Unity.Netcode;
+using System;
+
+public class CharacterSpawner : NetworkBehaviour
 {
     public int SelectedCard;
     Ray ray;
     Vector3 worldPosition;
     public LayerMask layerToIgnore;
     Vector3 mousePosition;
-    public GameObject BlockObj;
+    public GameObject toBeSpawnedPawn;
+    GameObject BlockObj;
     public bool cardWillFollow;
+
+    public NetworkVariable<Factions> playerFaction = new NetworkVariable<Factions>();
+    public CardsManager cardsManager;
+    public ManaManager manaManager;
+
+
+
+    private void Awake()
+    {
+
+    }
+
+    private void Start()
+    {
+
+
+
+        if (!IsOwner)
+            return;
+
+
+        StartServerRpc();
+
+
+
+    }
+
+    [ServerRpc]
+    private void StartServerRpc()
+    {
+        if (OwnerClientId == 0)
+        {
+            playerFaction.Value = Factions.Blue;
+            BlueFactionClientRpc();
+
+        }
+        else if (OwnerClientId == 1)
+        {
+            playerFaction.Value = Factions.Red;
+
+            RedFactionClientRpc();
+        }
+        else
+        {
+            playerFaction.Value = Factions.none;
+
+            Debug.Log("am red");
+        }
+
+
+    }
+
+    [ClientRpc]
+    private void BlueFactionClientRpc()
+    {
+        if ( !IsOwner)
+            return;
+        Debug.Log("am blue");
+        BlockObj = NetworkDistribitor.Instance.blockobjBlue.gameObject;
+        Camera.main.transform.position = NetworkDistribitor.Instance.CameraBlue.position;
+        Camera.main.transform.rotation = NetworkDistribitor.Instance.CameraBlue.rotation;
+    }
+    [ClientRpc]
+    private void RedFactionClientRpc()
+    {
+        if (!IsOwner)
+            return;
+
+        Debug.Log("am red");
+        BlockObj = NetworkDistribitor.Instance.blockobjRed.gameObject;
+        Camera.main.transform.position = NetworkDistribitor.Instance.CameraRed.position;
+        Camera.main.transform.rotation = NetworkDistribitor.Instance.CameraRed.rotation;
+
+
+    }
+
+
+    public void ChangeSelectedCard(int cardNumber)
+    {
+        SelectedCard = cardNumber;
+
+        cardWillFollow = true;
+    }
+
+
     public void CardFollowMouse(int i)
     {
         if (cardWillFollow)
         {
-            CardsManager.Instance.Cards[i].transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
-            Vector3 vector = new Vector3(CardsManager.Instance.Cards[i].transform.localPosition.x, CardsManager.Instance.Cards[i].transform.localPosition.y, 0);
-            CardsManager.Instance.Cards[i].transform.localPosition = vector;
+            cardsManager.Cards[i].transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector3 vector = new Vector3(cardsManager.Cards[i].transform.localPosition.x, cardsManager.Cards[i].transform.localPosition.y, 0);
+            cardsManager.Cards[i].transform.localPosition = vector;
         }
 
     }
 
     void Update()
     {
+
+
+        if (!IsOwner)
+            return;
+
+        if (BlockObj == null)
+            return;
+
         mousePosition = Input.mousePosition;
         ray = Camera.main.ScreenPointToRay(mousePosition);
 
 
 
-        CardsManager.Instance.ResetCardPositions();
+        cardsManager.ResetCardPositions();
         if (SelectedCard >= 0)
         {
-            BlockObj.SetActive(true); CardFollowMouse(SelectedCard);
+            BlockObj.gameObject.SetActive(true); CardFollowMouse(SelectedCard);
         }
         else if (SelectedCard < 0)
         {
-            BlockObj.SetActive(false);
+            BlockObj.gameObject.SetActive(false);
             return;
         }
-        if (CardsManager.Instance.Cards[SelectedCard].RepresentedPawn == null)
-            return;
+
+        if (cardsManager.Cards[SelectedCard].RepresentedPawn == null) return;
 
 
         if (Input.GetMouseButton(0))
@@ -56,12 +153,19 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
                     worldPosition = hit.point;
 
                 }
-              
+
+
 
 
 
             }
+            else
+            {
+                worldPosition = Vector3.zero;
+
+            }
         }
+
 
 
         if (Input.GetMouseButtonUp(0))
@@ -72,22 +176,28 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
 
             if (worldPosition != Vector3.zero)
             {
-                if (ManaManager.Instance.currentMana >= CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.ManaCost)
+                if (manaManager.currentMana >= cardsManager.Cards[SelectedCard].RepresentedPawn.ManaCost)
                 {
-                    int cardID = CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.pawnID;
-                    CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.SpawnPawn(cardID, Factions.Blue, worldPosition);
-                    ManaManager.Instance.SpendMana(CardsManager.Instance.Cards[SelectedCard].RepresentedPawn.ManaCost);
+
+                    // cardsManager.Cards[SelectedCard].RepresentedPawn.SpawnPawn(playerFaction.Value, worldPosition);
+
+                    SpawnPawnServerRpc(playerFaction.Value, worldPosition);
+                    manaManager.SpendMana(cardsManager.Cards[SelectedCard].RepresentedPawn.ManaCost);
 
 
-                    CardsManager.Instance.UpdateSingleCard(CardsManager.Instance.Cards[SelectedCard]);
+                    cardsManager.UpdateSingleCard(cardsManager.Cards[SelectedCard]);
 
                     SelectedCard = -1;
+
+
+
+
                 }
                 else
                 {
-                    ManaManager.Instance.NotEnoughMana();
-                   
-                  
+                    manaManager.NotEnoughMana();
+
+
                 }
 
 
@@ -106,6 +216,37 @@ public class CharacterSpawner : Singleton<CharacterSpawner>
 
 
 
+    }
+
+
+    [ServerRpc]
+    void SpawnPawnServerRpc(Factions faction, Vector3 position)
+    {
+
+
+        GameObject go = go = Instantiate(toBeSpawnedPawn, position, Quaternion.identity);
+        if (faction == Factions.Blue)
+        {
+
+            UnitStats stats = go.GetComponent<UnitStats>();
+            stats.faction.Value = Factions.Blue;
+            stats.enemyFaction.Value = Factions.Red;
+            PawnManager.Instance.bluePawns.Add(go.GetComponent<PawnAI>());
+
+
+        }
+        if (faction == Factions.Red)
+        {
+
+            UnitStats stats = go.GetComponent<UnitStats>();
+            stats.faction.Value = Factions.Red;
+            stats.enemyFaction.Value = Factions.Blue;
+            PawnManager.Instance.redPawns.Add(go.GetComponent<PawnAI>());
+
+        }
+
+        NetworkObject networkObject = go.GetComponent<NetworkObject>();
+        networkObject.Spawn();
     }
 
 

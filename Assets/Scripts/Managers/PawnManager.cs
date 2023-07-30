@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pixelplacement;
+using Unity.Netcode;
 public class PawnManager : Singleton<PawnManager>
 {
     public List<PawnAI> redPawns;
@@ -16,7 +17,7 @@ public class PawnManager : Singleton<PawnManager>
         foreach (GameObject go in pawnsInStart)
         {
             PawnAI pawnAI = go.GetComponent<PawnAI>();
-            if (pawnAI.stats.faction == Factions.Red)
+            if (pawnAI.stats.faction.Value == Factions.Red)
             {
                 redPawns.Add(pawnAI);
             }
@@ -56,6 +57,8 @@ public class PawnManager : Singleton<PawnManager>
 
         return (Factions)i;
     }
+
+
 
 }
 

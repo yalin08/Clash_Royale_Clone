@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Pixelplacement;
 using TMPro;
-
-public class CardsManager : Singleton<CardsManager>
+using Unity.Netcode;
+public class CardsManager :NetworkBehaviour
 {
     public List<Pawn> Deck;
 
@@ -18,7 +18,13 @@ public class CardsManager : Singleton<CardsManager>
     public int nextCardNumber;
     private void Start()
     {
+        if (!IsOwner)
+            return;
+
+        Cards = UIManager.Instance.Cards;
+        NextCard= UIManager.Instance.NextCard;
         UpdateCards(); nextCardNumber = 1;
+
         UpdateNextCard();
     }
 

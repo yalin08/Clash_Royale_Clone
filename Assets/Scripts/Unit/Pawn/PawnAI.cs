@@ -29,13 +29,13 @@ public class PawnAI : MonoBehaviour
     }
     private void Start()
     {
-        if (stats.enemyFaction == Factions.Blue)
+        if (stats.enemyFaction.Value == Factions.Blue)
         {
             EnemyTowers = TowersManager.Instance.BlueTowers;
 
         }
 
-        if (stats.enemyFaction == Factions.Red)
+        if (stats.enemyFaction.Value == Factions.Red)
         {
             EnemyTowers = TowersManager.Instance.RedTowers;
         }
@@ -133,13 +133,13 @@ public class PawnAI : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (stats.faction == Factions.Blue)
+        if (stats.faction.Value == Factions.Blue)
         {
 
             PawnManager.Instance.bluePawns.Remove(this);
         }
 
-        if (stats.faction == Factions.Red)
+        if (stats.faction.Value == Factions.Red)
         {
 
             PawnManager.Instance.redPawns.Remove(this);

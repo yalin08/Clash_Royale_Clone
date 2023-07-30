@@ -16,7 +16,7 @@ public class MainTower : UnitStats
         if (gameObject.scene.isLoaded)
             if (Application.isPlaying)
             {
-                if (faction == Factions.Blue)
+                if (faction.Value == Factions.Blue)
                 {
                     GameManager.Instance.Lose();
 

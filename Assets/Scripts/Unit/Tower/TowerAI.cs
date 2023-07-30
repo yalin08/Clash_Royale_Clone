@@ -17,7 +17,7 @@ public class TowerAI : MonoBehaviour
     {
         stats = GetComponent<UnitStats>();
 
-        enemyFaction = PawnManager.Instance.EnemyFaction(stats.faction);
+        enemyFaction = stats.enemyFaction.Value;
         shooter = GetComponent<UnitShooter>();
 
         if (enemyFaction == Factions.Blue)
@@ -57,9 +57,9 @@ public class TowerAI : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (stats.faction == Factions.Blue)
+        if (stats.faction.Value == Factions.Blue)
             TowersManager.Instance.BlueTowers.Remove(this);
-        if (stats.faction == Factions.Red)
+        if (stats.faction.Value == Factions.Red)
             TowersManager.Instance.RedTowers.Remove(this);
     }
 }

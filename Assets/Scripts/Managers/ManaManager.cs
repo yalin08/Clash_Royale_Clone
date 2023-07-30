@@ -5,12 +5,13 @@ using DG.Tweening;
 using Pixelplacement;
 using UnityEngine.UI;
 using TMPro;
-public class ManaManager : Singleton<ManaManager>
+using Unity.Netcode;
+public class ManaManager : NetworkBehaviour
 {
 
-    public float currentMana;
-    public float maxMana=10;
-    public float manaPerSecond=2.8f;
+    public float  currentMana;
+    public float maxMana = 10;
+    public float manaPerSecond = 2.8f;
 
     int mana;
 
@@ -23,20 +24,34 @@ public class ManaManager : Singleton<ManaManager>
     // Start is called before the first frame update
     void Start()
     {
-        mana = Mathf.FloorToInt(currentMana); 
+        if (!IsOwner)
+            return;
+
+        manaSlider = UIManager.Instance.manaSlider;
+        manaText = UIManager.Instance.manaText;
+        notEnoughManaText = UIManager.Instance.notEnoughManaText;
+
+
+
+
+
+        mana = Mathf.FloorToInt(currentMana);
         manaText.text = "" + mana;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!IsOwner)
+            return;
+
         if (mana == maxMana)
             return;
-        currentMana += Time.deltaTime/manaPerSecond;
+        currentMana += Time.deltaTime / manaPerSecond;
         manaSlider.value = currentMana / maxMana;
-        if (mana < Mathf.FloorToInt(currentMana) )
+        if (mana < Mathf.FloorToInt(currentMana))
         {
-            mana = Mathf.FloorToInt(currentMana) ;
+            mana = Mathf.FloorToInt(currentMana);
             ChangeUIValues();
         }
 
@@ -45,13 +60,13 @@ public class ManaManager : Singleton<ManaManager>
     public void SpendMana(float amount)
     {
         currentMana -= amount;
-        mana= Mathf.FloorToInt(currentMana); 
+        mana = Mathf.FloorToInt(currentMana);
         manaText.text = "" + mana;
     }
 
     public void ChangeUIValues()
     {
-        manaText.text = ""+mana;
+        manaText.text = "" + mana;
         manaText.transform.DOScale(1.3f, 0.3f).OnComplete(ResetTextTween);
         manaSlider.transform.DOScale(1.01f, 0.3f);
     }
@@ -64,7 +79,7 @@ public class ManaManager : Singleton<ManaManager>
 
     public void NotEnoughMana()
     {
-        manaText.transform.DOShakeScale(0.5f,0.5f).OnComplete(ResetTextTween);
+        manaText.transform.DOShakeScale(0.5f, 0.5f).OnComplete(ResetTextTween);
         manaSlider.transform.DOShakeScale(0.5f, 0.5f);
         notEnoughManaText.enabled = true;
     }

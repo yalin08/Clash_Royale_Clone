@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Unity.Netcode;
 
 
 public class UnitStats : MonoBehaviour
 {
- 
 
-    public Factions faction;
-     public Factions enemyFaction;
+
+    public NetworkVariable<Factions> faction;
+    public NetworkVariable<Factions> enemyFaction;
     public Stats stat;
     [Space]
 
@@ -27,12 +27,7 @@ public class UnitStats : MonoBehaviour
         stat.maxHealth = stat.health;
       
     }
-    private void Awake()
-    {
-      
-
-
-    }
+   
     private void Start()
     {
         if (healthBar == null)
@@ -50,17 +45,10 @@ public class UnitStats : MonoBehaviour
 
     }
 
+
     private void Update()
     {
-       /* if (!stat.canAttack)
-        {
-            timer += Time.deltaTime;
-            if (timer >= stat.attackPerSecond)
-            {
-                timer = 0;
-                stat.canAttack = true;
-            }
-        } */
+   
 
     }
 
@@ -86,7 +74,7 @@ public class UnitStats : MonoBehaviour
 }
 public enum Factions
 {
-    Blue, Red
+    Blue, Red,none
 }
 [System.Serializable]
 public class Stats

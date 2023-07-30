@@ -9,13 +9,14 @@ public class UICard : MonoBehaviour
     public TextMeshProUGUI ManaAmount;
     public Image PawnImage;
     public int buttonNumber;
-
+    public IntEvent GameEvent_ChangeCard;
     public void TouchCard()
     {
-        CharacterSpawner.Instance.SelectedCard = buttonNumber;
+        // CharacterSpawner.Instance.SelectedCard = buttonNumber;
 
-        CharacterSpawner.Instance.cardWillFollow = true;
+        //   CharacterSpawner.Instance.cardWillFollow = true;
 
+        GameEvent_ChangeCard.Raise(buttonNumber);
         //change this later
 
 

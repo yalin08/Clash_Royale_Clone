@@ -22,7 +22,7 @@ public class BulletScript : MonoBehaviour
             if (other.GetComponent<UnitStats>() != null)
             {
                 UnitStats UnitStats = other.GetComponent<UnitStats>();
-                if (UnitStats.faction == EnemyFaction)
+                if (UnitStats.faction.Value == EnemyFaction)
                 {
                     UnitStats.TakeDamage(damage);
                     Destroy(gameObject);

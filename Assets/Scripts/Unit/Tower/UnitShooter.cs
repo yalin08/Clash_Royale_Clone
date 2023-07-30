@@ -48,7 +48,7 @@ public class UnitShooter : MonoBehaviour
         BulletScript bullet = bulletObject.GetComponent<BulletScript>();
         bullet.damage = stats.stat.damage;
         bullet.speed = stats.stat.bulletSpeed;
-        bullet.EnemyFaction = stats.enemyFaction;
+        bullet.EnemyFaction = stats.enemyFaction.Value;
         bulletObject.transform.transform.LookAt(target);
 
         stats.stat.canAttack = false;
