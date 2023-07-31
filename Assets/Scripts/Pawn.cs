@@ -12,6 +12,8 @@ public class Pawn : ScriptableObject
     public int ManaCost;
     public Sprite CharacterImage;
 
+
+    public int CardID;
     private void OnValidate()
     {
         stats.maxHealth = stats.health;

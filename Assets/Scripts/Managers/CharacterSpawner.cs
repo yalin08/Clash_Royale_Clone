@@ -24,6 +24,10 @@ public class CharacterSpawner : NetworkBehaviour
 
 
 
+    public PawnsIdList PawnIDs;
+
+
+
     private void Awake()
     {
 
@@ -97,8 +101,14 @@ public class CharacterSpawner : NetworkBehaviour
     public void ChangeSelectedCard(int cardNumber)
     {
         SelectedCard = cardNumber;
-
+        ChangeSelectedCardOnServerRpc(cardsManager.Cards[cardNumber].RepresentedPawn.CardID);
         cardWillFollow = true;
+    }
+
+    [ServerRpc]
+    void ChangeSelectedCardOnServerRpc(int ID)
+    {
+        toBeSpawnedPawn = PawnIDs.PawnObjects[ID];
     }
 
 

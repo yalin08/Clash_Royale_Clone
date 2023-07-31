@@ -189,6 +189,7 @@ MonoBehaviour:
     m_InternalValue: 0
   cardsManager: {fileID: 6952974641319006300}
   manaManager: {fileID: 6952974641243118814}
+  PawnIDs: {fileID: 11400000, guid: 80bac8c8b81ea8145bb2baf461537633, type: 2}
 --- !u!114 &329654438062149009
 MonoBehaviour:
   m_ObjectHideFlags: 0
