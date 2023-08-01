@@ -9,11 +9,16 @@ public class TowerStats : UnitStats
 {
 
     public GameObject DestroyCanBePlaced;
-       public override void Die()
+    public override void Die()
     {
-        if (DestroyCanBePlaced != null)
-            Destroy(DestroyCanBePlaced);
         base.Die();
-      
+        if (DestroyCanBePlaced != null)
+        {
+            if(IsClient)
+            Destroy(DestroyCanBePlaced);
+
+        }
+
+
     }
 }

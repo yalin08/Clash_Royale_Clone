@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Unity.Netcode;
 [RequireComponent(typeof(SphereCollider))]
-public class PawnAI : MonoBehaviour
+public class PawnAI : NetworkBehaviour
 {
     [HideInInspector] public UnitStats stats;
     PawnMove move;
@@ -45,17 +46,18 @@ public class PawnAI : MonoBehaviour
 
     private void Update()
     {
-        if (shooter.target == null)
-        {
-            if (LastSeenPawn != null &&
-             Vector3.Distance(LastSeenPawn.transform.position, transform.position) < stats.stat.sightRange)
+        if (IsServer)
+            if (shooter.target == null)
             {
+                if (LastSeenPawn != null &&
+                 Vector3.Distance(LastSeenPawn.transform.position, transform.position) < stats.stat.sightRange)
+                {
 
-                AttackEnemy();
+                    AttackEnemy();
+                }
+
+                else MoveTowardTower();
             }
-
-            else MoveTowardTower();
-        }
 
 
     }
@@ -103,10 +105,12 @@ public class PawnAI : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+      
         if (other.transform.CompareTag("Pawn"))
         {
+        
             PawnAI enemyAI = other.GetComponent<PawnAI>();
-            if (enemyAI.stats.faction == stats.enemyFaction)
+            if (enemyAI.stats.faction.Value == stats.enemyFaction.Value)
             {
 
                 if (stats.stat.canAttackAir)
@@ -114,14 +118,14 @@ public class PawnAI : MonoBehaviour
                     LastSeenPawn = enemyAI;
                 }
 
-              else
+                else
                 {
                     if (!enemyAI.stats.stat.AirUnit)
                     {
                         LastSeenPawn = enemyAI;
                     }
                 }
-                   
+
             }
 
         }

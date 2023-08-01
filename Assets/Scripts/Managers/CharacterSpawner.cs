@@ -51,13 +51,13 @@ public class CharacterSpawner : NetworkBehaviour
     [ServerRpc]
     private void StartServerRpc()
     {
-        if (OwnerClientId == 0)
+        if (OwnerClientId == 1)
         {
             playerFaction.Value = Factions.Blue;
             BlueFactionClientRpc();
 
         }
-        else if (OwnerClientId == 1)
+        else if (OwnerClientId == 2)
         {
             playerFaction.Value = Factions.Red;
 
@@ -76,7 +76,7 @@ public class CharacterSpawner : NetworkBehaviour
     [ClientRpc]
     private void BlueFactionClientRpc()
     {
-        if ( !IsOwner)
+        if (!IsOwner)
             return;
         Debug.Log("am blue");
         BlockObj = NetworkDistribitor.Instance.blockobjBlue.gameObject;
@@ -100,6 +100,11 @@ public class CharacterSpawner : NetworkBehaviour
 
     public void ChangeSelectedCard(int cardNumber)
     {
+
+        if (!IsOwner)
+            return;
+
+
         SelectedCard = cardNumber;
         ChangeSelectedCardOnServerRpc(cardsManager.Cards[cardNumber].RepresentedPawn.CardID);
         cardWillFollow = true;
@@ -188,76 +193,46 @@ public class CharacterSpawner : NetworkBehaviour
             {
                 if (manaManager.currentMana >= cardsManager.Cards[SelectedCard].RepresentedPawn.ManaCost)
                 {
-
-                    // cardsManager.Cards[SelectedCard].RepresentedPawn.SpawnPawn(playerFaction.Value, worldPosition);
-
                     SpawnPawnServerRpc(playerFaction.Value, worldPosition);
                     manaManager.SpendMana(cardsManager.Cards[SelectedCard].RepresentedPawn.ManaCost);
-
-
                     cardsManager.UpdateSingleCard(cardsManager.Cards[SelectedCard]);
-
                     SelectedCard = -1;
-
-
-
-
                 }
                 else
                 {
                     manaManager.NotEnoughMana();
-
-
                 }
-
-
             }
             cardWillFollow = false;
-
             worldPosition = Vector3.zero;
 
-
-
-
-
-            //     Instantiate(Object, worldPosition, Quaternion.identity);
         }
 
-
-
-
     }
-
 
     [ServerRpc]
     void SpawnPawnServerRpc(Factions faction, Vector3 position)
     {
 
-
-        GameObject go = go = Instantiate(toBeSpawnedPawn, position, Quaternion.identity);
+        GameObject go = Instantiate(toBeSpawnedPawn, position, Quaternion.identity);
         if (faction == Factions.Blue)
         {
-
             UnitStats stats = go.GetComponent<UnitStats>();
             stats.faction.Value = Factions.Blue;
             stats.enemyFaction.Value = Factions.Red;
             PawnManager.Instance.bluePawns.Add(go.GetComponent<PawnAI>());
-
-
         }
         if (faction == Factions.Red)
         {
-
             UnitStats stats = go.GetComponent<UnitStats>();
             stats.faction.Value = Factions.Red;
             stats.enemyFaction.Value = Factions.Blue;
             PawnManager.Instance.redPawns.Add(go.GetComponent<PawnAI>());
-
         }
-
         NetworkObject networkObject = go.GetComponent<NetworkObject>();
         networkObject.Spawn();
     }
+
 
 
 

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-
-public class UnitShooter : MonoBehaviour
+using Unity.Netcode;
+public class UnitShooter : NetworkBehaviour
 {
     public GameObject bulletPrefab;
 
@@ -42,7 +42,9 @@ public class UnitShooter : MonoBehaviour
     public void ShootBullet()
     {
 
-       // Debug.Log(gameObject.name);
+        if (!IsServer) return;
+
+        Debug.Log("Shot bullet");
 
         GameObject bulletObject = Instantiate(bulletPrefab, transform.position, transform.rotation);
         BulletScript bullet = bulletObject.GetComponent<BulletScript>();
@@ -51,8 +53,14 @@ public class UnitShooter : MonoBehaviour
         bullet.EnemyFaction = stats.enemyFaction.Value;
         bulletObject.transform.transform.LookAt(target);
 
+        bullet.GetComponent<NetworkObject>().Spawn();
+
         stats.stat.canAttack = false;
-        Destroy(bulletObject, 1f);
+
     }
+
+ 
+
+
 
 }

@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class PawnAnimations : MonoBehaviour
+using Unity.Netcode;
+public class PawnAnimations : NetworkBehaviour
 {
     public UnitShooter shooter;
 
@@ -20,18 +20,26 @@ public class PawnAnimations : MonoBehaviour
 
     public void CancelAttack()
     {
+        if (IsClient) return;
         animator.SetBool("CancelAttack", true);
     }
     public void FireAnim()
     {
-        animator.speed = 1/shooter.stats.stat.attackPerSecond;
-        animator.SetBool("Attack",true);
-        animator.SetBool("Idle", false);
-        animator.SetBool("Walk", false);
-        animator.SetBool("CancelAttack", false);
+        if (IsClient) return;
+
+
+            animator.speed = 1 / shooter.stats.stat.attackPerSecond;
+            animator.SetBool("Attack", true);
+            animator.SetBool("Idle", false);
+            animator.SetBool("Walk", false);
+            animator.SetBool("CancelAttack", false);
+           
+           
     }
+
     public void IdleAnim()
     {
+        if (IsClient) return;
         animator.speed = 1;
         animator.SetBool("Idle", true);
         animator.SetBool("Walk", false);
@@ -39,6 +47,7 @@ public class PawnAnimations : MonoBehaviour
     }
     public void WalkAnim()
     {
+        if (IsClient) return;
         animator.speed = 1;
         animator.SetBool("Walk", true);
         animator.SetBool("Idle", false);

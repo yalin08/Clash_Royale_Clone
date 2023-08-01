@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class BulletScript : MonoBehaviour
+using Unity.Netcode;
+public class BulletScript : NetworkBehaviour
 {
     public float damage;
     public float speed;
     public Factions EnemyFaction;
+
+    private void Start()
+    {
+        Invoke("DestroySelf", 1);
+    }
     private void Update()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
@@ -25,11 +30,28 @@ public class BulletScript : MonoBehaviour
                 if (UnitStats.faction.Value == EnemyFaction)
                 {
                     UnitStats.TakeDamage(damage);
-                    Destroy(gameObject);
+                    DestroySelf();
                 }
             }
         }
      
+    }
+
+
+    private void DestroySelf()
+    {
+        if(IsServer)
+        Destroy(gameObject);
+        if (IsOwner)
+        DestroyServerRpc();
+    }
+
+    [ServerRpc]
+    void DestroyServerRpc()
+    {
+
+      
+        GetComponent<NetworkObject>().Despawn(true);
     }
 
 }

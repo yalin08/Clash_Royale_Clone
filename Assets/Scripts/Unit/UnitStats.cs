@@ -4,7 +4,7 @@ using UnityEngine;
 using Unity.Netcode;
 
 
-public class UnitStats : MonoBehaviour
+public class UnitStats : NetworkBehaviour
 {
 
 
@@ -20,14 +20,14 @@ public class UnitStats : MonoBehaviour
     public GameObject HealthBar;
 
     public HealthBars healthBar;
-    
+
 
     private void OnValidate()
     {
         stat.maxHealth = stat.health;
-      
+
     }
-   
+
     private void Start()
     {
         if (healthBar == null)
@@ -48,15 +48,17 @@ public class UnitStats : MonoBehaviour
 
     private void Update()
     {
-   
+
 
     }
 
     public void TakeDamage(float damage)
     {
         stat.health -= damage;
+        if (IsServer)
+            TakeDamageClientRpc(stat.health);
         healthBar.slider.value = stat.health / stat.maxHealth;
-        healthBar.healthText.text = ""+stat.health;
+        healthBar.healthText.text = "" + stat.health;
         healthBar.gameObject.SetActive(true);
 
         if (stat.health <= 0)
@@ -66,15 +68,34 @@ public class UnitStats : MonoBehaviour
 
     }
 
-    public virtual  void Die()
+
+    [ClientRpc]
+    void TakeDamageClientRpc(float health)
     {
-        Destroy(gameObject);
+        stat.health = health;
+        healthBar.slider.value = stat.health / stat.maxHealth;
+        healthBar.healthText.text = "" + stat.health;
+        healthBar.gameObject.SetActive(true);
+    }
+
+    public virtual void Die()
+    {
+        if (IsServer)
+            GetComponent<NetworkObject>().Despawn(true);
+        if (IsOwner)
+            DieServerRpc();
+    }
+    [ServerRpc]
+    void DieServerRpc()
+    {
+
+
     }
 
 }
 public enum Factions
 {
-    Blue, Red,none
+    Blue, Red, none
 }
 [System.Serializable]
 public class Stats

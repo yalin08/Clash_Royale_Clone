@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260705}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260711}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.00000017012027, y: 0.00000987165, z: 32.50943}
 --- !u!1 &3319832262097768067
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260707}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ Transform:
   - {fileID: 3319832262098260717}
   m_Father: {fileID: 3319832262098260697}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.5972915, y: 76.63517, z: 22.972868}
 --- !u!1 &3319832262097768069
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260709}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ Transform:
   - {fileID: 3319832262098260711}
   m_Father: {fileID: 3319832262098260697}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.00000052848463, y: -0.0000087986145, z: 36.21418}
 --- !u!1 &3319832262097768071
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260711}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ Transform:
   - {fileID: 3319832262098260705}
   m_Father: {fileID: 3319832262098260709}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.000012179338, y: 0.0000008355964, z: 39.716164}
 --- !u!1 &3319832262097768073
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 8255019290374452645}
   - component: {fileID: 2792801997675484177}
   - component: {fileID: 4084843450685994199}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ Transform:
   - {fileID: 3319832262098260715}
   m_Father: {fileID: 3319832262098260619}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -17.805035, y: 169.42274, z: -113.11534}
 --- !u!136 &8255019290374452645
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 8068251065772653610}
   - component: {fileID: 8375183604799290817}
   - component: {fileID: 4762234594285049253}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ Transform:
   - {fileID: 3319832262098260725}
   m_Father: {fileID: 3319832262098260713}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -19.24888, y: 8.284398, z: 110.83942}
 --- !u!136 &8068251065772653610
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -358,7 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260717}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ Transform:
   - {fileID: 3319832262098260719}
   m_Father: {fileID: 3319832262098260707}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.37152568, y: -21.37182, z: 16.989712}
 --- !u!1 &3319832262097768079
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260719}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260717}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.7823896, y: -2.5097077, z: 21.505045}
 --- !u!1 &3319832262097768081
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260721}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLLegToes1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ Transform:
   - {fileID: 3319832262098260723}
   m_Father: {fileID: 3319832262098260725}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.00000203348, y: -0.000013845037, z: -25.547955}
 --- !u!1 &3319832262097768083
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260723}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLLegToes2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260721}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000031127806, y: -0.000010758746, z: -0.0000030531494}
 --- !u!1 &3319832262097768085
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260725}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLLegAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ Transform:
   - {fileID: 3319832262098260721}
   m_Father: {fileID: 3319832262098260715}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.42527705, y: -3.852504, z: -57.276077}
 --- !u!1 &3319832262097768087
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260727}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLLegPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.9100003, y: -91.992325, z: -119.72507}
 --- !u!1 &3319832262097768089
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260729}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLWing02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,7 +569,7 @@ Transform:
   - {fileID: 3319832262098260613}
   m_Father: {fileID: 3319832262098260733}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.16466989, y: -34.81914, z: 8.5006485}
 --- !u!1 &3319832262097768091
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260731}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLWing02Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -11.8560505, y: -165.80194, z: -128.93558}
 --- !u!1 &3319832262097768093
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260733}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLWing01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +632,7 @@ Transform:
   - {fileID: 3319832262098260729}
   m_Father: {fileID: 3319832262098260661}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.760842, y: 101.173935, z: 46.112125}
 --- !u!1 &3319832262097768095
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260735}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLWing01Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -663,7 +663,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 11.98254, y: 168.63235, z: -137.41393}
 --- !u!1 &3319832262097768097
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260609}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLWing04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260613}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.280082, y: -20.621271, z: -15.526665}
 --- !u!1 &3319832262097768099
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260611}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLWing04Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +725,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.319627, y: 171.16667, z: -160.56375}
 --- !u!1 &3319832262097768101
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260613}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLWing03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,7 +757,7 @@ Transform:
   - {fileID: 3319832262098260609}
   m_Father: {fileID: 3319832262098260729}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.61526, y: 53.91771, z: -13.332808}
 --- !u!1 &3319832262097768103
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260615}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLWing03Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.102024, y: 152.56032, z: -151.0291}
 --- !u!1 &3319832262097768105
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigNeck3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ Transform:
   - {fileID: 3319832262098260675}
   m_Father: {fileID: 3319832262098260623}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.386539, y: -0.8280461, z: 23.903114}
 --- !u!1 &3319832262097768107
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 3319832262098260619}
   - component: {fileID: 63207536516098640}
   - component: {fileID: 1927412996076533664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigPelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +857,7 @@ Transform:
   - {fileID: 3319832262098260817}
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000015178196, y: -89.999985, z: -116.537155}
 --- !u!65 &63207536516098640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -896,7 +896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260621}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigNeck1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +918,7 @@ Transform:
   - {fileID: 3319832262098260623}
   m_Father: {fileID: 3319832262098260661}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.066535905, y: -0.06465906, z: -0.9402975}
 --- !u!1 &3319832262097768111
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,7 +928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigNeck2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +950,7 @@ Transform:
   - {fileID: 3319832262098260617}
   m_Father: {fileID: 3319832262098260621}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.27348432, y: -0.6650288, z: 23.47057}
 --- !u!1 &3319832262097768113
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260625}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArm1Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +981,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -60.240887, y: 60.37759, z: 158.49146}
 --- !u!1 &3319832262097768115
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 1190449170945450133}
   - component: {fileID: 5512689815504773735}
   - component: {fileID: 4050317095756221035}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1016,7 @@ Transform:
   - {fileID: 3319832262098260645}
   m_Father: {fileID: 3319832262098260631}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.099529, y: -24.506004, z: -102.3914}
 --- !u!136 &1190449170945450133
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1102,7 +1102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260629}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigPelvisGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1123,7 +1123,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000015178196, y: -89.999985, z: -116.537155}
 --- !u!1 &3319832262097768119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,7 +1136,7 @@ GameObject:
   - component: {fileID: 8806149597590995032}
   - component: {fileID: 5359665010040995134}
   - component: {fileID: 6423276562072978940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,7 +1158,7 @@ Transform:
   - {fileID: 3319832262098260627}
   m_Father: {fileID: 3319832262098260661}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 48.81576, y: -130.50687, z: 2.4094229}
 --- !u!136 &8806149597590995032
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1244,7 +1244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260633}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1266,7 +1266,7 @@ Transform:
   - {fileID: 3319832262098260635}
   m_Father: {fileID: 3319832262098260639}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000003004036, y: 0.00000340028, z: 21.516232}
 --- !u!1 &3319832262097768123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260635}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1297,7 +1297,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260633}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000007416353, y: 0.00000018050835, z: 13.679372}
 --- !u!1 &3319832262097768125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,7 +1307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260637}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArm2Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1328,7 +1328,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -46.809536, y: 96.0167, z: 27.734842}
 --- !u!1 &3319832262097768127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,7 +1338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260639}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1360,7 +1360,7 @@ Transform:
   - {fileID: 3319832262098260633}
   m_Father: {fileID: 3319832262098260645}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000016168784, y: -0.000011525591, z: 18.014153}
 --- !u!1 &3319832262097768161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,7 +1370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260673}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1391,7 +1391,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: -90}
 --- !u!1 &3319832262097768163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 8645215953815809337}
   - component: {fileID: 150601274492433893}
   - component: {fileID: 1497072244369690114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1426,7 +1426,7 @@ Transform:
   - {fileID: 3319832262098260687}
   m_Father: {fileID: 3319832262098260617}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.10036521, y: -0.12951073, z: 3.79704}
 --- !u!135 &8645215953815809337
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1512,8 +1512,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3319832262098260677}
   - component: {fileID: 3319832262105201957}
-  - component: {fileID: 3902169971494959843}
-  m_Layer: 6
+  - component: {fileID: 656670842840875185}
+  - component: {fileID: 5078974763400054074}
+  m_Layer: 9
   m_Name: Dragon Inferno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,7 +1569,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &3319832262105201957
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1576,7 +1577,7 @@ Animator:
   m_GameObject: {fileID: 3319832262097768165}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4a60a166ef988c54492949e9566596fc, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2bd45bb7e0fd5e84d9b09d1c1f2040b5, type: 2}
+  m_Controller: {fileID: 22100000, guid: 6b016dc841b99c8449fedff9ed59f310, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1585,8 +1586,9 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3902169971494959843
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &656670842840875185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1595,11 +1597,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 3319832262097768165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 287bd8f85553a7b418daf3e8e208a1ba, type: 3}
+  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FinishEvent: {fileID: 11400000, guid: 54f1663d82ca24447aa212664e9fb813, type: 2}
-  CloseDoorEvent: {fileID: 11400000, guid: 5e69f4b58e1cd3a4f833124ec8a0200e, type: 2}
+  TransitionStateInfoList: []
+  m_Animator: {fileID: 3319832262105201957}
+--- !u!114 &5078974763400054074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3319832262097768165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bedc3e6b3c367742a60202e44fe301f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shooter: {fileID: 0}
+  animator: {fileID: 3319832262105201957}
 --- !u!1 &3319832262097768167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,7 +1626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3319832262098260679}
   - component: {fileID: 3319832262109332453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dragon Inferno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1631,7 +1647,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!137 &3319832262109332453
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1753,7 +1769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260681}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigJawGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,7 +1790,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.61283946, y: -87.43137, z: 151.26312}
 --- !u!1 &3319832262097768171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,7 +1803,7 @@ GameObject:
   - component: {fileID: 1767850746666968288}
   - component: {fileID: 683111942486397425}
   - component: {fileID: 2033644164711205524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1809,7 +1825,7 @@ Transform:
   - {fileID: 3319832262098260695}
   m_Father: {fileID: 3319832262098260661}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -37.382324, y: 119.42464, z: -14.157048}
 --- !u!136 &1767850746666968288
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1895,7 +1911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260685}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigHeadGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1916,7 +1932,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.2690747, y: -88.11923, z: -112.87672}
 --- !u!1 &3319832262097768175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,7 +1942,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260687}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigJaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1947,7 +1963,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260675}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.9798856, y: 0.452592, z: -95.86428}
 --- !u!1 &3319832262097768177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,7 +1973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260689}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArm2Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1978,7 +1994,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 43.972137, y: 132.36194, z: 77.61781}
 --- !u!1 &3319832262097768179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,7 +2004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260691}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2010,7 +2026,7 @@ Transform:
   - {fileID: 3319832262098260701}
   m_Father: {fileID: 3319832262098260697}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00000021251077, y: -0.000008814899, z: 30.314184}
 --- !u!1 &3319832262097768181
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260693}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArm1Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2041,7 +2057,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 52.004684, y: 140.58177, z: 151.68706}
 --- !u!1 &3319832262097768183
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,7 +2070,7 @@ GameObject:
   - component: {fileID: 808802875619232865}
   - component: {fileID: 5034636708146385324}
   - component: {fileID: 1352113453953519736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2076,7 +2092,7 @@ Transform:
   - {fileID: 3319832262098260697}
   m_Father: {fileID: 3319832262098260683}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.616581, y: 8.888438, z: -67.238594}
 --- !u!136 &808802875619232865
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2162,7 +2178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2186,7 +2202,7 @@ Transform:
   - {fileID: 3319832262098260707}
   m_Father: {fileID: 3319832262098260695}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -52.683548, y: 60.341465, z: -85.45469}
 --- !u!1 &3319832262097768187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,7 +2212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmPalmGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2217,7 +2233,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -16.47946, y: 88.336754, z: 12.050547}
 --- !u!1 &3319832262097768189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,7 +2243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2249,7 +2265,7 @@ Transform:
   - {fileID: 3319832262098260703}
   m_Father: {fileID: 3319832262098260691}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.000013101071, y: 0.00000034282343, z: 33.816162}
 --- !u!1 &3319832262097768191
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,7 +2275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260703}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLArmIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2280,7 +2296,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260701}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000013199782, y: -0.0000044513054, z: 25.979387}
 --- !u!1 &3319832262097768193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,7 +2306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260833}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2312,7 +2328,7 @@ Transform:
   - {fileID: 3319832262098260845}
   m_Father: {fileID: 3319832262098260837}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.1527734, y: 7.7704434, z: -15.861515}
 --- !u!1 &3319832262097768195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,7 +2338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260835}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail5Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2343,7 +2359,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.1250763, y: -78.04046, z: -74.171135}
 --- !u!1 &3319832262097768197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,7 +2369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260837}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2375,7 +2391,7 @@ Transform:
   - {fileID: 3319832262098260833}
   m_Father: {fileID: 3319832262098260825}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5.63008, y: 6.3394747, z: -17.63635}
 --- !u!1 &3319832262097768199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,7 +2401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260839}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail4Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2406,7 +2422,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.6841843, y: -80.28853, z: -57.879547}
 --- !u!1 &3319832262097768201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,7 +2432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260841}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2438,7 +2454,7 @@ Transform:
   - {fileID: 3319832262098260853}
   m_Father: {fileID: 3319832262098260845}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.9005775, y: -8.791768, z: 22.101679}
 --- !u!1 &3319832262097768203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,7 +2464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260843}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail7Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2469,7 +2485,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 29
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5.096124, y: -94.46921, z: -24.97277}
 --- !u!1 &3319832262097768205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,7 +2495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260845}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2501,7 +2517,7 @@ Transform:
   - {fileID: 3319832262098260841}
   m_Father: {fileID: 3319832262098260833}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.382484, y: -11.566936, z: 26.87216}
 --- !u!1 &3319832262097768207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,7 +2527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260847}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail6Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2532,7 +2548,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 28
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.3146865, y: -83.46805, z: -47.670795}
 --- !u!1 &3319832262097768213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,7 +2558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260853}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2563,7 +2579,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260841}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.853405, y: -12.79969, z: 23.393194}
 --- !u!1 &3319832262097768215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,7 +2589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260855}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail8Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2594,7 +2610,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 30
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.0112484, y: -109.34844, z: 0.7049546}
 --- !u!1 &3319832262097768257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,7 +2620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260641}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2626,7 +2642,7 @@ Transform:
   - {fileID: 3319832262098260643}
   m_Father: {fileID: 3319832262098260645}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000026298148, y: -0.000010522788, z: 25.914146}
 --- !u!1 &3319832262097768259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,7 +2652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260643}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2658,7 +2674,7 @@ Transform:
   - {fileID: 3319832262098260653}
   m_Father: {fileID: 3319832262098260641}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000062386116, y: -0.0000017399526, z: 29.416225}
 --- !u!1 &3319832262097768261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,7 +2684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260645}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2692,7 +2708,7 @@ Transform:
   - {fileID: 3319832262098260655}
   m_Father: {fileID: 3319832262098260627}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 62.883892, y: -40.580452, z: -45.841816}
 --- !u!1 &3319832262097768263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,7 +2718,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260647}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmPalmGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2723,7 +2739,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 22.418585, y: 105.876686, z: 5.2915845}
 --- !u!1 &3319832262097768265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,7 +2749,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2755,7 +2771,7 @@ Transform:
   - {fileID: 3319832262098260651}
   m_Father: {fileID: 3319832262098260655}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.37157118, y: 21.371826, z: 13.989637}
 --- !u!1 &3319832262097768267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,7 +2781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260651}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2786,7 +2802,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260649}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.7823962, y: 2.50969, z: 18.50488}
 --- !u!1 &3319832262097768269
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,7 +2812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260653}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2817,7 +2833,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260643}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.000011345225, y: -0.0000026238406, z: 22.209404}
 --- !u!1 &3319832262097768271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,7 +2843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260655}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRArmThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2849,7 +2865,7 @@ Transform:
   - {fileID: 3319832262098260649}
   m_Father: {fileID: 3319832262098260645}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -6.706552, y: -71.80393, z: 19.740274}
 --- !u!1 &3319832262097768273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,7 +2878,7 @@ GameObject:
   - component: {fileID: 8141581087544925623}
   - component: {fileID: 944733795271139482}
   - component: {fileID: 4016782457322296313}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2884,7 +2900,7 @@ Transform:
   - {fileID: 3319832262098260659}
   m_Father: {fileID: 3319832262098260619}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 12.694303, y: -168.23285, z: -67.642044}
 --- !u!136 &8141581087544925623
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2973,7 +2989,7 @@ GameObject:
   - component: {fileID: 1997333619410678276}
   - component: {fileID: 8521868911160160053}
   - component: {fileID: 2059369187587142617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2995,7 +3011,7 @@ Transform:
   - {fileID: 3319832262098260669}
   m_Father: {fileID: 3319832262098260657}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.57202, y: -8.520212, z: 106.00278}
 --- !u!136 &1997333619410678276
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3081,7 +3097,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260661}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRibcage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3107,7 +3123,7 @@ Transform:
   - {fileID: 3319832262098260805}
   m_Father: {fileID: 3319832262098260823}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000024875287, y: -0.000003028305, z: -10.156024}
 --- !u!1 &3319832262097768279
 GameObject:
   m_ObjectHideFlags: 0
@@ -3117,7 +3133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260663}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRibcageGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3138,7 +3154,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.000017075472, y: -89.999954, z: -161.91344}
 --- !u!1 &3319832262097768281
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,7 +3164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260665}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRLegToes1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3170,7 +3186,7 @@ Transform:
   - {fileID: 3319832262098260667}
   m_Father: {fileID: 3319832262098260669}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.0000002479096, y: -0.0000043485284, z: -25.54788}
 --- !u!1 &3319832262097768283
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,7 +3196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260667}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRLegToes2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3201,7 +3217,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260665}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.0000015265745, y: 4.549546e-14, z: -0.0000015265744}
 --- !u!1 &3319832262097768285
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,7 +3227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260669}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRLegAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3233,7 +3249,7 @@ Transform:
   - {fileID: 3319832262098260665}
   m_Father: {fileID: 3319832262098260659}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5.697109, y: 13.691542, z: -86.85296}
 --- !u!1 &3319832262097768287
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,7 +3259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260671}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRLegPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3264,7 +3280,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.7238361, y: -90.57391, z: -130.46239}
 --- !u!1 &3319832262097768289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3274,7 +3290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260801}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRWing02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3296,7 +3312,7 @@ Transform:
   - {fileID: 3319832262098260813}
   m_Father: {fileID: 3319832262098260805}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -6.079409, y: 36.337536, z: 6.448195}
 --- !u!1 &3319832262097768291
 GameObject:
   m_ObjectHideFlags: 0
@@ -3306,7 +3322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260803}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRWing02Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3327,7 +3343,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 11.452833, y: -13.42511, z: -126.97237}
 --- !u!1 &3319832262097768293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3337,7 +3353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260805}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRWing01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3359,7 +3375,7 @@ Transform:
   - {fileID: 3319832262098260801}
   m_Father: {fileID: 3319832262098260661}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.75246936, y: -97.53183, z: 45.63347}
 --- !u!1 &3319832262097768295
 GameObject:
   m_ObjectHideFlags: 0
@@ -3369,7 +3385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260807}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRWing01Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3390,7 +3406,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -18.67695, y: 7.952503, z: -136.82845}
 --- !u!1 &3319832262097768297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,7 +3416,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260809}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRWing04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3421,7 +3437,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260813}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5.4668555, y: 20.71782, z: -18.84331}
 --- !u!1 &3319832262097768299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3431,7 +3447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260811}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRWing04Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3452,7 +3468,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -6.3272114, y: 17.236713, z: -167.63783}
 --- !u!1 &3319832262097768301
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,7 +3478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260813}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRWing03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3484,7 +3500,7 @@ Transform:
   - {fileID: 3319832262098260809}
   m_Father: {fileID: 3319832262098260801}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -14.629726, y: -54.903053, z: -14.696295}
 --- !u!1 &3319832262097768303
 GameObject:
   m_ObjectHideFlags: 0
@@ -3494,7 +3510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260815}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigRWing03Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3515,7 +3531,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -21.133102, y: 33.192852, z: -153.63701}
 --- !u!1 &3319832262097768305
 GameObject:
   m_ObjectHideFlags: 0
@@ -3525,7 +3541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260817}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3547,7 +3563,7 @@ Transform:
   - {fileID: 3319832262098260829}
   m_Father: {fileID: 3319832262098260619}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.877788, y: 2.7024944, z: 123.20356}
 --- !u!1 &3319832262097768307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,7 +3573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260819}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail1Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3578,7 +3594,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.11523561, y: -96.46582, z: 7.43816}
 --- !u!1 &3319832262097768309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,7 +3604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260821}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigSpine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3602,7 +3618,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3319832262097768309}
-  m_LocalRotation: {x: -0.0000000014057905, y: 0.0000000023408993, z: -0.0032287557, w: 0.9999948}
+  m_LocalRotation: {x: -0.0000000014057905, y: 0.0000000023408993, z: -0.0032287557,
+    w: 0.9999948}
   m_LocalPosition: {x: -0.11410064, y: -0.023688372, z: 0.000000004612286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3610,7 +3627,7 @@ Transform:
   - {fileID: 3319832262098260823}
   m_Father: {fileID: 3319832262098260619}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.0000007443633, y: -0.0000061990513, z: -6.121737}
 --- !u!1 &3319832262097768311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3623,7 +3640,7 @@ GameObject:
   - component: {fileID: 2250481001244711065}
   - component: {fileID: 3608569588206846347}
   - component: {fileID: 2423590517074322945}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigSpine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3645,7 +3662,7 @@ Transform:
   - {fileID: 3319832262098260661}
   m_Father: {fileID: 3319832262098260821}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.0000014787129, y: -0.0000021967562, z: -30.246027}
 --- !u!65 &2250481001244711065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3730,7 +3747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260825}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3752,7 +3769,7 @@ Transform:
   - {fileID: 3319832262098260837}
   m_Father: {fileID: 3319832262098260829}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.5276392, y: 9.095233, z: -30.957174}
 --- !u!1 &3319832262097768315
 GameObject:
   m_ObjectHideFlags: 0
@@ -3762,7 +3779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260827}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail3Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3783,7 +3800,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.4885164, y: -88.752556, z: -40.959976}
 --- !u!1 &3319832262097768317
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,7 +3810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260829}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3815,7 +3832,7 @@ Transform:
   - {fileID: 3319832262098260825}
   m_Father: {fileID: 3319832262098260817}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.7817677, y: -1.4133446, z: -18.453253}
 --- !u!1 &3319832262097768319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,7 +3842,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3319832262098260831}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigTail2Gizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3846,4 +3863,4 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3319832262098260677}
   m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.63865936, y: -97.97157, z: -10.526417}
