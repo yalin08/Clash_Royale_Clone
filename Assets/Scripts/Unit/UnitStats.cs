@@ -82,15 +82,9 @@ public class UnitStats : NetworkBehaviour
     {
         if (IsServer)
             GetComponent<NetworkObject>().Despawn(true);
-        if (IsOwner)
-            DieServerRpc();
+ 
     }
-    [ServerRpc]
-    void DieServerRpc()
-    {
 
-
-    }
 
 }
 public enum Factions

@@ -1,24 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
+using Unity.Netcode;
 
 
 public class TowerStats : UnitStats
 {
 
     public GameObject DestroyCanBePlaced;
-    public override void Die()
+
+
+    private void OnDestroy()
     {
-        base.Die();
-        if (DestroyCanBePlaced != null)
-        {
-            if(IsClient)
-            Destroy(DestroyCanBePlaced);
-
-        }
-
+        Destroy(DestroyCanBePlaced);
 
     }
+
+
+
 }

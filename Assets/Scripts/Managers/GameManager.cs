@@ -4,6 +4,7 @@ using UnityEngine;
 using Pixelplacement;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -35,7 +36,7 @@ public class GameManager : Singleton<GameManager>
         PawnManager.Instance.StopAllPawns();
         LoseScreen.SetActive(true);
 
-        WaveManager.Instance.StopAllCoroutines();
+      
     }
 
     public void Win()
@@ -43,14 +44,15 @@ public class GameManager : Singleton<GameManager>
         PawnManager.Instance.StopAllPawns();
         WinScreen.SetActive(true);
 
-        WaveManager.Instance.StopAllCoroutines();
+     
     }
 
 
     public void RestartLevel()
     {
+        Destroy(NetworkManager.Singleton.gameObject);
         SceneManager.LoadScene(0);
-        AddressableManager.Instance.Clear();
+       // AddressableManager.Instance.Clear();
     }
 
 

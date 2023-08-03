@@ -45,11 +45,10 @@ public class CharacterSpawner : NetworkBehaviour
         StartServerRpc();
 
 
-
     }
 
     [ServerRpc]
-    private void StartServerRpc()
+    public void StartServerRpc()
     {
         if (OwnerClientId == 1)
         {
@@ -232,6 +231,43 @@ public class CharacterSpawner : NetworkBehaviour
         NetworkObject networkObject = go.GetComponent<NetworkObject>();
         networkObject.Spawn();
     }
+
+    [ClientRpc]
+    public void WinOrLoseClientRpc(Factions faction)
+    {
+
+
+
+        if (IsOwner)
+        {
+            RestartServerRpc();
+            if (faction == playerFaction.Value)
+            {
+                GameManager.Instance.Lose();
+            }
+            else
+            {
+                GameManager.Instance.Win();
+            }
+        }
+
+
+        NetworkManager.Singleton.Shutdown();
+     
+
+    }
+
+
+
+
+    [ServerRpc]
+    void RestartServerRpc()
+    {
+        NetworkManager.Singleton.Shutdown();
+        GameManager.Instance.RestartLevel();
+      
+    }
+  
 
 
 

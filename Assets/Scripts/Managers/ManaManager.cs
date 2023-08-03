@@ -15,11 +15,9 @@ public class ManaManager : NetworkBehaviour
 
     int mana;
 
-    public Slider manaSlider;
-    public TextMeshProUGUI manaText;
-    public TextMeshProUGUI notEnoughManaText;
-
-
+  //  public Slider  UIManager.Instance.manaSlider;
+   // public TextMeshProUGUI manaText;
+  //  public TextMeshProUGUI UIManager.Instance.notEnoughManaText;
 
     // Start is called before the first frame update
     void Start()
@@ -27,16 +25,13 @@ public class ManaManager : NetworkBehaviour
         if (!IsOwner)
             return;
 
-        manaSlider = UIManager.Instance.manaSlider;
-        manaText = UIManager.Instance.manaText;
-        notEnoughManaText = UIManager.Instance.notEnoughManaText;
-
-
+      
+     
 
 
 
         mana = Mathf.FloorToInt(currentMana);
-        manaText.text = "" + mana;
+       
     }
 
     // Update is called once per frame
@@ -45,10 +40,12 @@ public class ManaManager : NetworkBehaviour
         if (!IsOwner)
             return;
 
+  
+
         if (mana == maxMana)
             return;
         currentMana += Time.deltaTime / manaPerSecond;
-        manaSlider.value = currentMana / maxMana;
+         UIManager.Instance.manaSlider.value = currentMana / maxMana;
         if (mana < Mathf.FloorToInt(currentMana))
         {
             mana = Mathf.FloorToInt(currentMana);
@@ -61,28 +58,29 @@ public class ManaManager : NetworkBehaviour
     {
         currentMana -= amount;
         mana = Mathf.FloorToInt(currentMana);
-        manaText.text = "" + mana;
+        UIManager.Instance.manaText.text = "" + mana;
     }
 
     public void ChangeUIValues()
     {
-        manaText.text = "" + mana;
-        manaText.transform.DOScale(1.3f, 0.3f).OnComplete(ResetTextTween);
-        manaSlider.transform.DOScale(1.01f, 0.3f);
+        UIManager.Instance.manaText.text = "" + mana;
+        UIManager.Instance.manaText.transform.DOScale(1.3f, 0.3f).OnComplete(ResetTextTween);
+         UIManager.Instance.manaSlider.transform.DOScale(1.01f, 0.3f);
     }
     void ResetTextTween()
     {
-        manaText.transform.DOScale(1f, 0.4f);
-        manaSlider.transform.DOScale(1f, 0.3f);
-        notEnoughManaText.enabled = false;
+        UIManager.Instance.manaText.transform.DOScale(1f, 0.4f);
+         UIManager.Instance.manaSlider.transform.DOScale(1f, 0.3f);
+        UIManager.Instance.notEnoughManaText.enabled = false;
     }
 
     public void NotEnoughMana()
     {
-        manaText.transform.DOShakeScale(0.5f, 0.5f).OnComplete(ResetTextTween);
-        manaSlider.transform.DOShakeScale(0.5f, 0.5f);
-        notEnoughManaText.enabled = true;
+        UIManager.Instance.manaText.transform.DOShakeScale(0.5f, 0.5f).OnComplete(ResetTextTween);
+         UIManager.Instance.manaSlider.transform.DOShakeScale(0.5f, 0.5f);
+        UIManager.Instance.notEnoughManaText.enabled = true;
     }
+
 
 
 }

@@ -73,7 +73,8 @@ public class AddressableManager : Singleton<AddressableManager>
     private void Download_Completed(AsyncOperationHandle obj)
     {
 
-        LoadGameScene(); showSlider = false;
+        LoadGameScene();
+        showSlider = false;
 
     }
 
@@ -81,18 +82,10 @@ public class AddressableManager : Singleton<AddressableManager>
     {
         sceneinstance = Addressables.LoadSceneAsync("GameScene");
     }
+ 
 
 
 
-
-    public void CreatePawn(int pawnID, Factions faction, Vector3 position)
-    {
-        AssetReference pawn = Pawns[pawnID];
-
-        pawn.InstantiateAsync().Completed += go =>
-        {
-        };
-    }
 
 
 }

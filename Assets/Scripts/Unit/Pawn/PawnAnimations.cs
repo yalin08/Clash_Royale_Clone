@@ -15,6 +15,7 @@ public class PawnAnimations : NetworkBehaviour
 
     public void Fire()
     {
+        if (IsClient) return;
         shooter.ShootBullet();
     }
 

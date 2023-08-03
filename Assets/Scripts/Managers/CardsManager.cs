@@ -16,7 +16,13 @@ public class CardsManager :NetworkBehaviour
 
 
     public int nextCardNumber;
+
     private void Start()
+    {
+        StartGame();
+    }
+
+    public void StartGame()
     {
         if (!IsOwner)
             return;

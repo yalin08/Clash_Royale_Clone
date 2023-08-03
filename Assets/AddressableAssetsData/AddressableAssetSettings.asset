@@ -66,7 +66,7 @@ MonoBehaviour:
       - m_Id: 3336037b48d27784f9c773dd04e6145a
         m_Value: ServerData/[BuildTarget]
       - m_Id: 4fbd2c4e2a38e524e926a1e7479b2160
-        m_Value: https://storage.googleapis.com/clashroyalenosurrender/[BuildTarget]
+        m_Value: https://storage.googleapis.com/clashroyalenosurrender/Android
     m_ProfileEntryNames:
     - m_Id: 6f0841d33b46ed74eb7f8e5f65b58188
       m_Name: BuildTarget

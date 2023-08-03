@@ -1,32 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Unity.Netcode;
 public class MainTower : UnitStats
 {
+    public FactionEvent GameEnd;
 
-
-    public override void Die()
-    {
-        base.Die();
-        Destroy(gameObject);
-    }
     private void OnDestroy()
     {
-        if (gameObject.scene.isLoaded)
-            if (Application.isPlaying)
-            {
-                if (faction.Value == Factions.Blue)
-                {
-                    GameManager.Instance.Lose();
+        if (IsOwner)
+        {
+            GameEnd.Raise(faction.Value);
 
-                }
-                else
-                {
-                    GameManager.Instance.Win();
-                }
-            }
-
+        }
+  
     }
+  
+
 
 }

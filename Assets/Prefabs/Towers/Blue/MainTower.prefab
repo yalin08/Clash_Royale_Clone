@@ -256,6 +256,7 @@ MonoBehaviour:
   HealthBar: {fileID: 3604970447049403812, guid: 798ee4d72c55ce14a95438e4e9978a42,
     type: 3}
   healthBar: {fileID: 4183232240812321067}
+  GameEnd: {fileID: 11400000, guid: bdf6e349a7b1f884dafa440afa16b021, type: 2}
 --- !u!114 &1002886697430658682
 MonoBehaviour:
   m_ObjectHideFlags: 0

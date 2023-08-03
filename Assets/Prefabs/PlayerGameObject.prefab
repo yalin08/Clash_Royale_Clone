@@ -48,9 +48,6 @@ MonoBehaviour:
   currentMana: 6
   maxMana: 10
   manaPerSecond: 2.8
-  manaSlider: {fileID: 0}
-  manaText: {fileID: 0}
-  notEnoughManaText: {fileID: 0}
 --- !u!114 &6952974641243118815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +139,7 @@ GameObject:
   - component: {fileID: 1043107684670674272}
   - component: {fileID: 329654438062149009}
   - component: {fileID: 1020218346806877657}
+  - component: {fileID: 4080370837556883089}
   m_Layer: 0
   m_Name: PlayerGameObject
   m_TagString: Untagged
@@ -225,6 +223,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1043107684670674272}
         m_TargetAssemblyTypeName: CharacterSpawner, Assembly-CSharp
         m_MethodName: ChangeSelectedCard
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4080370837556883089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952974642072049619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de6f61b03b04334486356397bbb7747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: bdf6e349a7b1f884dafa440afa16b021, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1043107684670674272}
+        m_TargetAssemblyTypeName: CharacterSpawner, Assembly-CSharp
+        m_MethodName: WinOrLoseClientRpc
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

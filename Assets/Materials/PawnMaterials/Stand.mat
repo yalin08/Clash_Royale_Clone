@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Stand
-  m_Shader: {fileID: 4800000, guid: 7ffc1bc2bbb1ef64f84b552b2d2f0619, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4c62e389d3b0c72469cbbc9d1057c334, type: 3}
   m_ValidKeywords:
   - TCP2_MOBILE
   - TCP2_RAMP_BANDS

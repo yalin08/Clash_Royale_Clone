@@ -14,6 +14,7 @@ public class BulletScript : NetworkBehaviour
     }
     private void Update()
     {
+        if(IsServer)
         transform.position += transform.forward * speed * Time.deltaTime;
     }
 
@@ -29,6 +30,7 @@ public class BulletScript : NetworkBehaviour
                 UnitStats UnitStats = other.GetComponent<UnitStats>();
                 if (UnitStats.faction.Value == EnemyFaction)
                 {
+                  
                     UnitStats.TakeDamage(damage);
                     DestroySelf();
                 }
