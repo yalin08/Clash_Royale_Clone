@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pixelplacement;
 using Unity.Netcode;
+using Unity.Netcode.Transports;
+
 public class NetworkDistribitor : Singleton<NetworkDistribitor>
 {
     public NetworkObject blockobjRed;
@@ -12,14 +14,18 @@ public class NetworkDistribitor : Singleton<NetworkDistribitor>
     public Transform CameraRed;
 
 
-
     public GameObject Player;
     bool didSpawn = false;
 
 
 
+   
+
     private void Update()
     {
+
+
+
         if (NetworkManager.Singleton.IsServer)
             if (NetworkManager.Singleton.ConnectedClientsList.Count >= 2)
                 if (didSpawn == false)
