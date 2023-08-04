@@ -11,17 +11,20 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.ResourceManagement.ResourceProviders;
 
+
 public class AddressableManager : Singleton<AddressableManager>
 
 {
-    public AssetReference[] Pawns;
-    public GameObject ggo;
-    public Slider slider;
+    public AssetReference Arena;
+    public AssetReference PlayerTower;
+    public AssetReference EnemyTower;
+
 
     public TMPro.TextMeshProUGUI text;
 
     private AsyncOperationHandle mSceneHandle;
     bool showSlider = false;
+    public Slider slider;
     AsyncOperationHandle<SceneInstance> sceneinstance;
 
     private void Start()
@@ -39,11 +42,11 @@ public class AddressableManager : Singleton<AddressableManager>
 
     public void AcceptedDownload()
     {
-        mSceneHandle = Addressables.DownloadDependenciesAsync("GameScene");
+
+        mSceneHandle = Addressables.DownloadDependenciesAsync("level");
 
         mSceneHandle.Completed += Download_Completed;
 
-        showSlider = true;
     }
 
     public void RefusedDownload()
@@ -57,7 +60,7 @@ public class AddressableManager : Singleton<AddressableManager>
     {
         if (text != null)
         {
-            var Size = Addressables.GetDownloadSizeAsync("GameScene").Result;
+            var Size = Addressables.GetDownloadSizeAsync("level").Result;
 
             text.text = $"Download Size {(Size / 1024) / 1024} mb. \nDownload ? ";
         }
@@ -80,13 +83,28 @@ public class AddressableManager : Singleton<AddressableManager>
 
     public void LoadGameScene()
     {
-        sceneinstance = Addressables.LoadSceneAsync("GameScene");
+        SceneManager.LoadScene("GameScene");
+        showSlider = false;
     }
- 
+
+
+    public async void GenerateArena(Transform transform)
+    {
+        GameObject go = Addressables.InstantiateAsync(Arena, transform.position, transform.rotation, transform).Result;
+    
+    }
 
 
 
-
+    public async void GeneratePlayerTower(Transform transform)
+    {
+       Addressables.InstantiateAsync(PlayerTower, transform.position, transform.rotation, transform);
+     
+    }
+    public async void GenerateEnemyTower(Transform transform)
+    {
+        Addressables.InstantiateAsync(EnemyTower, transform.position, transform.rotation, transform);
+    }
 
 }
 

@@ -140,6 +140,16 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 1129861571}
+    - target: {fileID: 2860641125169064247, guid: fe48be876cb6df94190ef67788ba9b9e,
+        type: 3}
+      propertyPath: EnemyTower.m_AssetGUID
+      value: a8fb5b46c242d4740bc77aec93c83219
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860641125169064247, guid: fe48be876cb6df94190ef67788ba9b9e,
+        type: 3}
+      propertyPath: PlayerTower.m_AssetGUID
+      value: 88870c5975cbfe142bcec52cd18d7f4f
+      objectReference: {fileID: 0}
     - target: {fileID: 7454509474176427862, guid: fe48be876cb6df94190ef67788ba9b9e,
         type: 3}
       propertyPath: m_LocalPosition.x

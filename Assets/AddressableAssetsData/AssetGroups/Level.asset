@@ -17,10 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 5bd3a2ae2a1cd6a479f17355452fa423
   m_SerializeEntries:
-  - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
-    m_Address: GameScene
+  - m_GUID: 3385d36f55c9a7e44958772f0899b10a
+    m_Address: AddressablePrefabs
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - level
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 570540219f40bb44fbec2b8f0e8bf881, type: 2}

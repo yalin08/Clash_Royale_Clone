@@ -17,7 +17,9 @@ public class UnitStats : NetworkBehaviour
 
 
 
-    public GameObject HealthBar;
+    public GameObject HealthBarRed;
+    public GameObject HealthBarBlue;
+
 
     public HealthBars healthBar;
 
@@ -28,13 +30,24 @@ public class UnitStats : NetworkBehaviour
 
     }
 
-    private void Start()
+    void Start()
     {
-        if (healthBar == null)
-        {
-            GameObject go = Instantiate(HealthBar, transform);
-            healthBar = GetComponentInChildren<HealthBars>();
+        ChangeColors(faction.Value);
 
+
+    }
+
+    public virtual void ChangeColors(Factions factions)
+    {
+
+        Debug.Log("color change " + factions);
+        if (factions == faction.Value)
+        {
+            healthBar = HealthBarBlue.GetComponent<HealthBars>();
+        }
+        else
+        {
+            healthBar = HealthBarRed.GetComponent<HealthBars>();
         }
 
 
@@ -42,7 +55,6 @@ public class UnitStats : NetworkBehaviour
         healthBar.healthText.text = "" + stat.health;
 
         healthBar.gameObject.SetActive(false);
-
     }
 
 
@@ -82,7 +94,7 @@ public class UnitStats : NetworkBehaviour
     {
         if (IsServer)
             GetComponent<NetworkObject>().Despawn(true);
- 
+
     }
 
 

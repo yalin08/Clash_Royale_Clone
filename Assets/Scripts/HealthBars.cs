@@ -18,13 +18,13 @@ public class HealthBars : MonoBehaviour
     }
     private void Start()
     {
-        slider.transform.position = main.WorldToScreenPoint(transform.parent.position + (Vector3.up * yAxisOffset));
+        slider.transform.position = main.WorldToScreenPoint(transform.parent.parent.position + (Vector3.up * yAxisOffset));
 
     }
 
     private void Update()
     {
-        slider.transform.position = main.WorldToScreenPoint(transform.parent.position+(Vector3.up* yAxisOffset));
+        slider.transform.position = main.WorldToScreenPoint(transform.parent.parent.position+(Vector3.up* yAxisOffset));
 
     }
 

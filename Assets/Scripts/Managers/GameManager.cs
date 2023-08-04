@@ -53,7 +53,7 @@ public class GameManager : Singleton<GameManager>
     public void RestartLevel()
     {
         Destroy(NetworkManager.Singleton.gameObject);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("GameScene");
        // AddressableManager.Instance.Clear();
     }
 

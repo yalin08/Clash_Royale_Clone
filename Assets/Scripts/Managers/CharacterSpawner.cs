@@ -53,6 +53,8 @@ public class CharacterSpawner : NetworkBehaviour
         if (OwnerClientId == 1)
         {
             playerFaction.Value = Factions.Blue;
+
+
             BlueFactionClientRpc();
 
         }
@@ -60,6 +62,7 @@ public class CharacterSpawner : NetworkBehaviour
         {
             playerFaction.Value = Factions.Red;
 
+           
             RedFactionClientRpc();
         }
         else
@@ -78,6 +81,18 @@ public class CharacterSpawner : NetworkBehaviour
         if (!IsOwner)
             return;
         Debug.Log("am blue");
+
+
+        foreach (TowerAI tower in TowersManager.Instance.BlueTowers)
+        {
+            tower.GetComponent<UnitStats>().ChangeColors(Factions.Blue);
+        }
+        foreach (TowerAI tower in TowersManager.Instance.RedTowers)
+        {
+            tower.GetComponent<UnitStats>().ChangeColors(Factions.Blue);
+        }
+
+
         BlockObj = NetworkDistribitor.Instance.blockobjBlue.gameObject;
         Camera.main.transform.position = NetworkDistribitor.Instance.CameraBlue.position;
         Camera.main.transform.rotation = NetworkDistribitor.Instance.CameraBlue.rotation;
@@ -87,6 +102,16 @@ public class CharacterSpawner : NetworkBehaviour
     {
         if (!IsOwner)
             return;
+
+
+        foreach (TowerAI tower in TowersManager.Instance.BlueTowers)
+        {
+            tower.GetComponent<UnitStats>().ChangeColors(Factions.Red);
+        }
+        foreach (TowerAI tower in TowersManager.Instance.RedTowers)
+        {
+            tower.GetComponent<UnitStats>().ChangeColors(Factions.Red);
+        }
 
         Debug.Log("am red");
         BlockObj = NetworkDistribitor.Instance.blockobjRed.gameObject;
@@ -136,13 +161,13 @@ public class CharacterSpawner : NetworkBehaviour
 
         if (playerFaction.Value == Factions.Red)
         {
-            GameManager.Instance.TextOnDown.text = "" + GameManager.Instance.BluePoints;
-            GameManager.Instance.TextOnTop.text = "" + GameManager.Instance.RedPoints;
+            GameManager.Instance.TextOnDown.text = "" + GameManager.Instance.RedPoints;
+            GameManager.Instance.TextOnTop.text = "" + GameManager.Instance.BluePoints;
         }
         if (playerFaction.Value == Factions.Blue)
         {
-            GameManager.Instance.TextOnDown.text =""+ GameManager.Instance.RedPoints;
-            GameManager.Instance.TextOnTop.text = "" + GameManager.Instance.BluePoints;
+            GameManager.Instance.TextOnDown.text = "" + GameManager.Instance.BluePoints;
+            GameManager.Instance.TextOnTop.text = "" + GameManager.Instance.RedPoints;
         }
 
 
@@ -235,6 +260,7 @@ public class CharacterSpawner : NetworkBehaviour
         }
         if (faction == Factions.Red)
         {
+            go.transform.rotation = Quaternion.Euler(0, 180, 0);
             UnitStats stats = go.GetComponent<UnitStats>();
             stats.faction.Value = Factions.Red;
             stats.enemyFaction.Value = Factions.Blue;

@@ -57,10 +57,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082a64c8c2d3ce7418cecf93a292ac20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dontDestroyOnLoad: 0
-  Pawns: []
-  ggo: {fileID: 0}
-  slider: {fileID: 0}
+  _dontDestroyOnLoad: 1
+  Arena:
+    m_AssetGUID: 728a676522f70954ea75eb7fa5cf6ae4
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  PlayerTower:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  EnemyTower:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   text: {fileID: 0}
-  labelReference:
-    m_LabelString: 

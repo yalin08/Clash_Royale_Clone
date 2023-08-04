@@ -4,6 +4,7 @@ using UnityEngine;
 using Pixelplacement;
 using Unity.Netcode;
 using Unity.Netcode.Transports;
+using TMPro;
 
 public class NetworkDistribitor : Singleton<NetworkDistribitor>
 {
@@ -18,8 +19,7 @@ public class NetworkDistribitor : Singleton<NetworkDistribitor>
     bool didSpawn = false;
 
 
-
-   
+    
 
     private void Update()
     {
@@ -28,12 +28,19 @@ public class NetworkDistribitor : Singleton<NetworkDistribitor>
 
         if (NetworkManager.Singleton.IsServer)
             if (NetworkManager.Singleton.ConnectedClientsList.Count >= 2)
+            {
                 if (didSpawn == false)
                 {
                     didSpawn = true;
                     SpawnPlayerObjServerRpc();
                 }
+               
+            }
     }
+
+
+  
+
 
     [ServerRpc]
     void SpawnPlayerObjServerRpc()
