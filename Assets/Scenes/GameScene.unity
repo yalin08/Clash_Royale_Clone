@@ -409,8 +409,8 @@ MonoBehaviour:
     m_Bits: 128
   RedPoints: 0
   BluePoints: 0
-  redPointsText: {fileID: 2046427135}
-  bluePointsText: {fileID: 706938380}
+  TextOnTop: {fileID: 2046427135}
+  TextOnDown: {fileID: 706938380}
 --- !u!114 &119244888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,7 +1281,7 @@ RectTransform:
   - {fileID: 1656435316}
   - {fileID: 2135844980}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10738,7 +10738,7 @@ Transform:
   - {fileID: 1607508303}
   - {fileID: 1480320142}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3875140835791696252
 Transform:

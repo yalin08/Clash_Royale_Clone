@@ -134,6 +134,18 @@ public class CharacterSpawner : NetworkBehaviour
         if (!IsOwner)
             return;
 
+        if (playerFaction.Value == Factions.Red)
+        {
+            GameManager.Instance.TextOnDown.text = "" + GameManager.Instance.BluePoints;
+            GameManager.Instance.TextOnTop.text = "" + GameManager.Instance.RedPoints;
+        }
+        if (playerFaction.Value == Factions.Blue)
+        {
+            GameManager.Instance.TextOnDown.text =""+ GameManager.Instance.RedPoints;
+            GameManager.Instance.TextOnTop.text = "" + GameManager.Instance.BluePoints;
+        }
+
+
         if (BlockObj == null)
             return;
 
@@ -240,7 +252,7 @@ public class CharacterSpawner : NetworkBehaviour
 
         if (IsOwner)
         {
-            RestartServerRpc();
+           
             if (faction == playerFaction.Value)
             {
                 GameManager.Instance.Lose();
@@ -249,6 +261,7 @@ public class CharacterSpawner : NetworkBehaviour
             {
                 GameManager.Instance.Win();
             }
+            RestartServerRpc();
         }
 
 

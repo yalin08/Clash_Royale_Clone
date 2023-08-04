@@ -7,16 +7,21 @@ public class MainTower : UnitStats
 {
     public FactionEvent GameEnd;
 
-    private void OnDestroy()
+    public override void Die()
     {
-        if (IsOwner)
-        {
-            GameEnd.Raise(faction.Value);
-
-        }
-  
+        base.Die();
+        GameEnd.Raise(faction.Value);
+       
     }
-  
+
+
+
+    [ClientRpc]
+    private void OnDestroyClientRpc()
+    {
+       
+    }
+
 
 
 }

@@ -18,8 +18,8 @@ public class GameManager : Singleton<GameManager>
     public int RedPoints;
     public int BluePoints;
 
-    public TextMeshProUGUI redPointsText;
-    public TextMeshProUGUI bluePointsText;
+    public TextMeshProUGUI TextOnTop;
+    public TextMeshProUGUI TextOnDown;
 
 
     private void Update()
@@ -27,8 +27,10 @@ public class GameManager : Singleton<GameManager>
         RedPoints = 3 - TowersManager.Instance.BlueTowers.Count;
         BluePoints = 3 - TowersManager.Instance.RedTowers.Count;
 
-        redPointsText.text = "" + RedPoints;
-        bluePointsText.text = "" + BluePoints;
+      
+   
+
+
     }
 
     public void Lose()
